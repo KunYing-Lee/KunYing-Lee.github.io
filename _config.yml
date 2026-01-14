@@ -2,26 +2,24 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+title: Kun-Ying Lee # the website title (if blank, full name will be used instead)
+first_name: Kun-Ying
+middle_name: 
+last_name: Lee (Aaron)
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Email is the best way to reach me.
+description: > 
+  Personal academic website of Kun-Ying Lee (Aaron). Undergraduate student at Tsinghua University, researching Humanoid Robotics and Embodied AI.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+keywords: Kun-Ying Lee, Aaron Lee, Tsinghua University, MARS Lab, Robotics, Reinforcement Learning, Embodied AI, 李坤应, 李坤應， 清华大学, 机器人, 强化学习, 具身智能
+lang: en 
+icon: 🎓
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
-last_updated: false # set to true if you want to display last updated in the footer
-impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+url: https://KunYing-Lee.github.io
+baseurl: ""
+last_updated: true
+impressum_path:
 back_to_top: true # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
