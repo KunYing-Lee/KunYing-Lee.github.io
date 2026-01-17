@@ -376,7 +376,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-officially-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
+            },},{id: "news-joined-th-mos-robot-soccer-team",
+          title: 'Joined TH-MOS Robot Soccer Team.',
+          description: "",
+          section: "News",},{id: "news-officially-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
           title: 'Officially joined the MARS Lab at Tsinghua IIIS as a research intern, advised...',
           description: "",
           section: "News",},{id: "projects-project-1",
