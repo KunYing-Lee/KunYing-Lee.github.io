@@ -1497,3 +1497,24 @@ figure.cover {
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
 }
+
+/*******************************************************************************
+ * Custom Styles
+ ******************************************************************************/
+
+/* Increase base font size */
+body {
+  font-size: 1.1rem;
+}
+
+/* Make page titles (like 'Kun-Ying Lee') bold and larger */
+.post-title {
+  font-weight: 700 !important; /* Bold */
+  font-size: 3rem !important; /* Larger */
+}
+
+/* Make section headers (like 'News', 'Latest Posts') bold and larger */
+h2 {
+  font-weight: 700 !important; /* Bold */
+  font-size: 2rem; /* Larger */
+}
