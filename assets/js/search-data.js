@@ -363,7 +363,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-dualbot-explorer-project-development",
           title: 'DualBot Explorer Project Development',
-          description: "Feb. 2024",
+          description: "Feb. 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dualbot-explorer/";
             },},{id: "projects-ecotracker-android-app-development",
