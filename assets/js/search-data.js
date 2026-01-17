@@ -379,55 +379,10 @@ ninja.data = [{
             },},{id: "news-joined-th-mos-robot-soccer-team",
           title: 'Joined TH-MOS Robot Soccer Team.',
           description: "",
-          section: "News",},{id: "news-officially-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
-          title: 'Officially joined the MARS Lab at Tsinghua IIIS as a research intern, advised...',
+          section: "News",},{id: "news-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
+          title: 'Joined the MARS Lab at Tsinghua IIIS as a research intern, advised by...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
-            },},{id: "projects-dualbot-explorer-project-development",
+          section: "News",},{id: "projects-dualbot-explorer-project-development",
           title: 'DualBot Explorer Project Development',
           description: "Feb. 2024",
           section: "Projects",handler: () => {
@@ -439,7 +394,7 @@ ninja.data = [{
               window.location.href = "/projects/ecotracker/";
             },},{id: "projects-uav-based-food-delivery-routing-for-tsinghua-university",
           title: 'UAV-Based Food-Delivery Routing For Tsinghua University',
-          description: "Aug. 2025 – Ongoing",
+          description: "Aug. 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/uav-routing/";
             },},{
