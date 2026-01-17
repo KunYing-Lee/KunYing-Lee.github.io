@@ -75,15 +75,15 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
+      <h2 id="publications" style="margin-top: 2rem;">
+        Publications
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Projects -->
-    <h2>
-      <a href="{{ '/projects/' | relative_url }}" style="color: inherit">Projects</a>
+    <h2 id="projects" style="margin-top: 2rem;">
+      Projects
     </h2>
     <div class="projects-list" style="margin-top: 2rem;">
       {% assign sorted_projects = site.projects | sort: "importance" %}
