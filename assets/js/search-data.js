@@ -418,16 +418,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-officially-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
+          title: 'Officially joined the MARS Lab at Tsinghua IIIS as a research intern, advised...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
