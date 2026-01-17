@@ -36,18 +36,18 @@ layout: default
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
     
-    <div class="header-contact text-center mt-3">
-      <div class="email mb-3">
-        <a href="mailto:lky25@mails.tsinghua.edu.cn">lky25@mails.tsinghua.edu.cn</a>
-      </div>
+    <div class="header-contact mt-3">
       <div class="social-icons">
-        <a href="https://scholar.google.com/citations?user=KVnfzeYAAAAJ&hl=zh-TW&oi=sra" class="mx-2" title="Google Scholar">
+        <a href="mailto:lky25@mails.tsinghua.edu.cn" class="mr-3" title="Email">
+          <i class="fas fa-envelope" style="font-size: 2rem;"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=KVnfzeYAAAAJ&hl=zh-TW&oi=sra" class="mr-3" title="Google Scholar">
           <i class="ai ai-google-scholar" style="font-size: 2rem;"></i>
         </a>
-        <a href="https://linkedin.com/in/kunying-lee" class="mx-2" title="LinkedIn">
+        <a href="https://linkedin.com/in/kunying-lee" class="mr-3" title="LinkedIn">
           <i class="fa-brands fa-linkedin" style="font-size: 2rem;"></i>
         </a>
-        <a href="https://github.com/KunYing-Lee" class="mx-2" title="GitHub">
+        <a href="https://github.com/KunYing-Lee" class="mr-3" title="GitHub">
           <i class="fa-brands fa-github" style="font-size: 2rem;"></i>
         </a>
       </div>
@@ -81,14 +81,7 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
 
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
