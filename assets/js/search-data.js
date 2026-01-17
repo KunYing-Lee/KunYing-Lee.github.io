@@ -427,6 +427,21 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-dualbot-explorer-project-development",
+          title: 'DualBot Explorer Project Development',
+          description: "Feb. 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dualbot-explorer/";
+            },},{id: "projects-ecotracker-android-app-development",
+          title: 'EcoTracker Android App Development',
+          description: "Apr. 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ecotracker/";
+            },},{id: "projects-uav-based-food-delivery-routing-for-tsinghua-university",
+          title: 'UAV-Based Food-Delivery Routing For Tsinghua University',
+          description: "Aug. 2025 – Ongoing",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/uav-routing/";
             },},{
         id: 'social-cv',
         title: 'CV',
