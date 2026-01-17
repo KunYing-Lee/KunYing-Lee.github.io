@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Officially joined the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at Tsinghua IIIS as a research intern, advised by Prof. [Hang Zhao](https://hangzhaomit.github.io)!
+Joined the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at Tsinghua IIIS as a research intern, advised by Prof. [Hang Zhao](https://hangzhaomit.github.io)!

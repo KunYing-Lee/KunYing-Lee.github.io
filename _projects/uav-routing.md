@@ -1,7 +1,7 @@
 ---
 layout: page
 title: UAV-Based Food-Delivery Routing For Tsinghua University
-description: Aug. 2025 – Ongoing
+description: Aug. 2025
 img: 
 importance: 1
 category: work
