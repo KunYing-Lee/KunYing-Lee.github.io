@@ -29,7 +29,7 @@ latest_posts:
 
 I am a first-year undergraduate student in the **[Department of Computer Science and Technology](https://www.cs.tsinghua.edu.cn/csen/)** at **[Tsinghua University](https://www.tsinghua.edu.cn/en/)**.
 
-Currently, I am a research intern at the **[MARS Lab](https://mars-lab-tsinghua.github.io/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://zhaohang.hu/)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
+Currently, I am a research intern at the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://hangzhaomit.github.io)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
 
 Additionally, I am a member of the **TH-MOS** (Tsinghua Master of Soccer) robot soccer team, working on Gait Control algorithms for competitive robots.
 
