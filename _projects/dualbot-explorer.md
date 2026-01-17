@@ -1,9 +1,9 @@
 ---
 layout: page
 title: DualBot Explorer Project Development
-description: Feb. 2024
+description: Feb. 2023
 img: 
-importance: 2
+importance: 3
 category: work
 github: https://github.com/KunYing-Lee/DualbotExplorer
 ---
