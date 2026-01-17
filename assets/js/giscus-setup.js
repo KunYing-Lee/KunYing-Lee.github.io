@@ -19,9 +19,9 @@ function determineGiscusTheme() {
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
     "data-repo": "KunYing-Lee/KunYing-Lee.github.io",
-    "data-repo-id": "",
-    "data-category": "Comments",
-    "data-category-id": "",
+    "data-repo-id": "R_kgDOQ5mDAA",
+    "data-category": "Announcements",
+    "data-category-id": "DIC_kwDOQ5mDAM4C1CXP",
     "data-mapping": "title",
     "data-strict": "1",
     "data-reactions-enabled": "1",
