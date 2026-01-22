@@ -376,6 +376,11 @@ ninja.data = [{
           description: "Oct. 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/human-resource-machine/";
+            },},{id: "projects-logisim-based-risc-cpu-implementation",
+          title: 'Logisim Based RISC CPU Implementation',
+          description: "Jun. 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/logisim-risc-cpu/";
             },},{id: "projects-uav-based-food-delivery-routing-for-tsinghua-university",
           title: 'UAV-Based Food-Delivery Routing For Tsinghua University',
           description: "Aug. 2025",
