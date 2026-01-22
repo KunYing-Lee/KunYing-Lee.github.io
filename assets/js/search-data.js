@@ -371,6 +371,11 @@ ninja.data = [{
           description: "Apr. 2024",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ecotracker/";
+            },},{id: "projects-human-resource-machine",
+          title: 'Human Resource Machine',
+          description: "Oct. 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/human-resource-machine/";
             },},{id: "projects-uav-based-food-delivery-routing-for-tsinghua-university",
           title: 'UAV-Based Food-Delivery Routing For Tsinghua University',
           description: "Aug. 2025",
