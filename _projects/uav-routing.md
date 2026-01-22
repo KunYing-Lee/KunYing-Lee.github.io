@@ -2,7 +2,7 @@
 layout: page
 title: UAV-Based Food-Delivery Routing For Tsinghua University
 description: Aug. 2025
-img: 
+img: assets/img/projects/UAV.png
 importance: 1
 category: work
 github: https://github.com/KunYing-Lee/UAV-Routing-for-Tsinghua
