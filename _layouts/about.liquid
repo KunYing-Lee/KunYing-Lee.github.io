@@ -89,17 +89,32 @@ layout: default
       {% assign sorted_projects = site.projects | sort: "importance" %}
       {% for project in sorted_projects %}
         <div class="project-item mb-3">
-          <h5 class="mb-1"><strong><a href="{{ project.github }}" target="_blank" style="color: inherit; text-decoration: none;">{{ project.title }}</a></strong> <span class="text-muted" style="font-size: 0.9em;">({{ project.description }})</span></h5>
-          <div class="project-content">
-            {{ project.content }}
-          </div>
-          {% if project.github %}
-            <div class="project-links mt-1">
-               <a href="{{ project.github }}" target="_blank" style="color: inherit; text-decoration: none;">
-                  <i class="fa-brands fa-github"></i> {{ project.github | remove: "https://" | remove: "http://" }}
-               </a>
+          <div class="row">
+            {% if project.img %}
+            <div class="col-sm-5 col-md-3">
+              <div class="project-img">
+                {% include figure.liquid loading="eager" path=project.img sizes="200px" alt="project thumbnail" class="img-fluid rounded z-depth-1" %}
+              </div>
             </div>
-          {% endif %}
+            <div class="col-sm-7 col-md-9">
+            {% else %}
+            <div class="col-12">
+            {% endif %}
+            
+              <h5 class="mb-1"><strong><a href="{{ project.github }}" target="_blank" style="color: inherit; text-decoration: none;">{{ project.title }}</a></strong> <span class="text-muted" style="font-size: 0.9em;">({{ project.description }})</span></h5>
+              <div class="project-content">
+                {{ project.content }}
+              </div>
+              {% if project.github %}
+                <div class="project-links mt-1">
+                   <a href="{{ project.github }}" target="_blank" style="color: inherit; text-decoration: none;">
+                      <i class="fa-brands fa-github"></i> {{ project.github | remove: "https://" | remove: "http://" }}
+                   </a>
+                </div>
+              {% endif %}
+            
+            </div> <!-- End col text -->
+          </div> <!-- End row -->
         </div>
         {% unless forloop.last %}
         <hr class="my-3" style="border-top: 1px dashed var(--global-divider-color);">
