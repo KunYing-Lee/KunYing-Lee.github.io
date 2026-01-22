@@ -4,4 +4,6 @@ permalink: /robots.txt
 User-agent: *
 Disallow:
 
+Sitemap: https://KunYing-Lee.github.io/sitemap.xml
+
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
