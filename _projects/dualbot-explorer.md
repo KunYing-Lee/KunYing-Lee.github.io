@@ -3,7 +3,7 @@ layout: page
 title: DualBot Explorer Project Development
 description: Feb. 2023
 img: assets/img/projects/Dualbot.png
-importance: 3
+importance: 4
 category: work
 github: https://github.com/KunYing-Lee/DualbotExplorer
 ---

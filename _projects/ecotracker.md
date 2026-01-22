@@ -3,7 +3,7 @@ layout: page
 title: EcoTracker Android App Development
 description: Apr. 2024
 img: assets/img/projects/EcoTracker.png
-importance: 4
+importance: 5
 category: work
 github: https://github.com/KunYing-Lee/EcoTracker
 ---
