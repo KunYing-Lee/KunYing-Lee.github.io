@@ -35,6 +35,16 @@ table {
   }
 }
 
+table:not(.table) {
+  border-collapse: collapse;
+
+  td,
+  th {
+    border: 1px solid var(--global-divider-color);
+    padding: 0.35rem 0.75rem;
+  }
+}
+
 a,
 table.table a {
   color: var(--global-theme-color);
