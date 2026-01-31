@@ -2,3 +2,5 @@ User-agent: *
 Disallow:
 
 Sitemap: https://KunYing-Lee.github.io/sitemap.xml
+
+Sitemap: https://KunYing-Lee.github.io/sitemap.xml
