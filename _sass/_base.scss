@@ -1120,6 +1120,12 @@ nav[data-toggle="toc"] {
       border-left-color: var(--global-hover-color);
     }
   }
+
+  /* Force all nested nav items to be expanded */
+  .nav .nav {
+    display: block !important;
+    height: auto !important;
+  }
 }
 
 /* small screens */
