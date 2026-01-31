@@ -16,7 +16,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "post-general-motion-tracking-a-scalable-framework-for-unified-human-motion-control",
+        
+          title: "General Motion Tracking: A Scalable Framework for Unified Human Motion Control",
+        
+        description: "Exploring the General Motion Tracking (GMT) framework, a unified policy for tracking diverse human motions using adaptive sampling, Mixture-of-Experts, and behavior cloning distillation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/gmt/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
