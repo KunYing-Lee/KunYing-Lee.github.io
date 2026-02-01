@@ -1528,6 +1528,11 @@ body {
   font-size: 1.1rem;
 }
 
+/* Increase line height for better readability */
+.post-content, .post-content p, .post-content li, .post-content td {
+  line-height: 1.8;
+}
+
 /* Increase spacing between headings and content */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.2rem;
