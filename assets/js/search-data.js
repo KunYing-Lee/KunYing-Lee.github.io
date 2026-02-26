@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "Blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "post-general-motion-tracking-a-scalable-framework-for-unified-human-motion-control",
+  },{id: "post-general-motion-tracking-a-scalable-framework-for-unified-human-motion-control",
         
           title: "General Motion Tracking: A Scalable Framework for Unified Human Motion Control",
         
