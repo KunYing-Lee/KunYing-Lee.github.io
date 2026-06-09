@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 
 ---
 
-I am a first-year undergraduate student in the **[Department of Computer Science and Technology](https://www.cs.tsinghua.edu.cn/csen/)** at **[Tsinghua University](https://www.tsinghua.edu.cn/en/)**.
+I am a first-year undergraduate student in **[IIIS (Yao Class)](https://iiis.tsinghua.edu.cn/en/)**, Tsinghua University, pursuing a Bachelor’s degree in Computer Science.
 
 Currently, I am a research intern at the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://hangzhaomit.github.io)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
 
