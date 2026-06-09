@@ -33,4 +33,4 @@ Currently, I am a research intern at the **[MARS Lab](https://group.iiis.tsinghu
 
 Additionally, I am a member of the **TH-MOS** (Tsinghua Master of Soccer) robot soccer team, working on Gait Control algorithms for competitive robots.
 
-Outside of research, I am a passionate pianist and a member of the **Tsinghua University Clavier Team**. I also enjoy playing frisbee with the CS department team.
+Outside of research, I am a passionate pianist and a member of the **Tsinghua University Clavier Team**. I also enjoy playing frisbee.
