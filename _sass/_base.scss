@@ -258,6 +258,15 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.post-header .social-icons {
+  a,
+  a:hover,
+  a:focus {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+}
+
 // Navbar customization
 
 .navbar {
@@ -690,6 +699,14 @@ footer.sticky-bottom {
 // Projects
 
 .projects {
+  &.content-filter {
+    margin-top: 0.75rem;
+  }
+
+  #projects-filter-selected:checked ~ .projects-list {
+    display: none;
+  }
+
   a {
     text-decoration: none;
 
@@ -726,10 +743,89 @@ footer.sticky-bottom {
   }
 }
 
+.content-filter {
+  .content-filter-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .content-filter-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+  }
+
+  .content-filter-label {
+    position: relative;
+    color: var(--global-text-color-light);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    padding: 0.25rem 0;
+    transition:
+      color 0.18s ease,
+      opacity 0.18s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -0.25rem;
+      left: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: transparent;
+      content: "";
+    }
+  }
+
+  .content-filter-divider {
+    color: var(--global-divider-color);
+    line-height: 1;
+    user-select: none;
+  }
+}
+
+#publications-filter-selected:focus-visible ~ .content-filter-controls label[for="publications-filter-selected"],
+#publications-filter-all:focus-visible ~ .content-filter-controls label[for="publications-filter-all"],
+#projects-filter-selected:focus-visible ~ .content-filter-controls label[for="projects-filter-selected"],
+#projects-filter-all:focus-visible ~ .content-filter-controls label[for="projects-filter-all"] {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+}
+
+#publications-filter-selected:checked ~ .content-filter-controls label[for="publications-filter-selected"],
+#publications-filter-all:checked ~ .content-filter-controls label[for="publications-filter-all"],
+#projects-filter-selected:checked ~ .content-filter-controls label[for="projects-filter-selected"],
+#projects-filter-all:checked ~ .content-filter-controls label[for="projects-filter-all"] {
+  color: var(--global-theme-color);
+  font-weight: 500;
+
+  &::after {
+    background: var(--global-theme-color);
+  }
+}
+
 // Publications
 
 .publications {
   margin-top: 2rem;
+
+  &.content-filter {
+    margin-top: 0.75rem;
+  }
+
+  #publications-filter-selected:checked ~ ol.bibliography > li:nth-child(n + 3) {
+    display: none;
+  }
 
   h1 {
     color: var(--global-theme-color);
