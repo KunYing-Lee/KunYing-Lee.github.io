@@ -333,9 +333,88 @@ ul.task-list input[type="checkbox"] {
   content: none;
 }
 
+.news-timeline-collapsible .news-timeline-item:nth-child(3) .news-timeline-marker::after {
+  content: none;
+}
+
 .news-timeline-content {
   min-width: 0;
   line-height: 1.55;
+}
+
+.news-older-control {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.news-older-item {
+  display: none;
+}
+
+.news-older-control:checked ~ .news-timeline .news-older-item {
+  display: grid;
+}
+
+.news-older-toggle-item {
+  margin-top: -0.75rem;
+  padding-bottom: 0;
+}
+
+.news-older-control:checked ~ .news-timeline .news-older-toggle-item {
+  padding-bottom: 0.55rem;
+}
+
+.news-older-toggle-label {
+  color: var(--global-theme-color);
+  cursor: pointer;
+}
+
+.news-older-toggle-marker {
+  cursor: pointer;
+}
+
+.news-older-toggle-marker::before {
+  width: 0;
+  height: 0;
+  margin-top: 0.42rem;
+  border: 0;
+  border-top: 0.38rem solid transparent;
+  border-bottom: 0.38rem solid transparent;
+  border-left: 0.55rem solid var(--global-theme-color);
+  border-radius: 0;
+  background: transparent;
+  content: "";
+  box-shadow: none;
+  transition: transform 0.18s ease;
+}
+
+.news-older-toggle-marker::after {
+  content: none;
+}
+
+.news-older-control:checked ~ .news-timeline .news-older-toggle-marker::before {
+  transform: rotate(90deg);
+}
+
+.news-gallery-toggle-marker {
+  cursor: pointer;
+}
+
+.news-gallery-toggle-marker::before {
+  width: 0;
+  height: 0;
+  margin-top: 0.42rem;
+  border: 0;
+  border-top: 0.38rem solid transparent;
+  border-bottom: 0.38rem solid transparent;
+  border-left: 0.55rem solid var(--global-theme-color);
+  border-radius: 0;
+  background: transparent;
+  content: "";
+  box-shadow: none;
 }
 
 .news-gallery {

@@ -9,7 +9,6 @@ related_posts: false
 
 <div class="news-gallery">
   <input class="news-gallery-control" type="checkbox" id="thmos-rcap-tianjin-2026-gallery-toggle">
-  <label class="news-gallery-toggle" for="thmos-rcap-tianjin-2026-gallery-toggle">Gallery</label>
   <div class="news-gallery-collapse" id="thmos-rcap-tianjin-2026-gallery">
     <div class="news-gallery-card">
       <input class="news-gallery-slide-control" type="radio" name="thmos-rcap-tianjin-2026-gallery-slide" id="thmos-rcap-tianjin-2026-slide-1" checked>

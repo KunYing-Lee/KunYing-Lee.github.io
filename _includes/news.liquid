@@ -1,32 +1,91 @@
 <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
-    <div
-      class="news-timeline-wrapper"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
+    <div class="news-timeline-wrapper">
+      {% assign news = site.news | reverse %}
+      {% assign news_visible_limit = 3 %}
+      {% assign use_older_toggle = false %}
+      {% if include.limit and news_size > news_visible_limit %}
+        {% assign use_older_toggle = true %}
       {% endif %}
-    >
-      <ol class="news-timeline">
-        {% assign news = site.news | reverse %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
+      {% if use_older_toggle %}
+        <input class="news-older-control" type="checkbox" id="news-older-toggle">
+      {% endif %}
+      <ol class="news-timeline{% if use_older_toggle %} news-timeline-collapsible{% endif %}">
+        {% if use_older_toggle %}
+          {% for item in news limit: news_visible_limit %}
+            <li class="news-timeline-item">
+              <time class="news-timeline-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
+              {% assign item_content = item.content | remove: '<p>' | remove: '</p>' | emojify %}
+              {% assign gallery_control_id = nil %}
+              {% if item_content contains 'news-gallery-control' %}
+                {% assign gallery_control_id = item_content | split: 'class="news-gallery-control" type="checkbox" id="' | last | split: '"' | first %}
+              {% endif %}
+              {% if gallery_control_id %}
+                <label class="news-timeline-marker news-gallery-toggle-marker" for="{{ gallery_control_id }}" aria-label="Toggle gallery"></label>
+              {% else %}
+                <span class="news-timeline-marker" aria-hidden="true"></span>
+              {% endif %}
+              <div class="news-timeline-content">
+                {% if item.inline %}
+                  {{ item_content }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+          <li class="news-timeline-item news-older-toggle-item">
+            <label class="news-timeline-date news-older-toggle-label" for="news-older-toggle">Older News</label>
+            <label class="news-timeline-marker news-older-toggle-marker" for="news-older-toggle" aria-label="Toggle older news"></label>
+            <div class="news-timeline-content"></div>
+          </li>
+          {% for item in news offset: news_visible_limit %}
+            <li class="news-timeline-item news-older-item">
+              <time class="news-timeline-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
+              {% assign item_content = item.content | remove: '<p>' | remove: '</p>' | emojify %}
+              {% assign gallery_control_id = nil %}
+              {% if item_content contains 'news-gallery-control' %}
+                {% assign gallery_control_id = item_content | split: 'class="news-gallery-control" type="checkbox" id="' | last | split: '"' | first %}
+              {% endif %}
+              {% if gallery_control_id %}
+                <label class="news-timeline-marker news-gallery-toggle-marker" for="{{ gallery_control_id }}" aria-label="Toggle gallery"></label>
+              {% else %}
+                <span class="news-timeline-marker" aria-hidden="true"></span>
+              {% endif %}
+              <div class="news-timeline-content">
+                {% if item.inline %}
+                  {{ item_content }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
         {% else %}
-          {% assign news_limit = news_size %}
-        {% endif %}
-        {% for item in news limit: news_limit %}
+          {% for item in news %}
           <li class="news-timeline-item">
             <time class="news-timeline-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
-            <span class="news-timeline-marker" aria-hidden="true"></span>
+            {% assign item_content = item.content | remove: '<p>' | remove: '</p>' | emojify %}
+            {% assign gallery_control_id = nil %}
+            {% if item_content contains 'news-gallery-control' %}
+              {% assign gallery_control_id = item_content | split: 'class="news-gallery-control" type="checkbox" id="' | last | split: '"' | first %}
+            {% endif %}
+            {% if gallery_control_id %}
+              <label class="news-timeline-marker news-gallery-toggle-marker" for="{{ gallery_control_id }}" aria-label="Toggle gallery"></label>
+            {% else %}
+              <span class="news-timeline-marker" aria-hidden="true"></span>
+            {% endif %}
             <div class="news-timeline-content">
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {{ item_content }}
               {% else %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
               {% endif %}
             </div>
           </li>
-        {% endfor %}
+          {% endfor %}
+        {% endif %}
       </ol>
     </div>
   {% else %}
