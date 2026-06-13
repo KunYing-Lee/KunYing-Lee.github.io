@@ -25,12 +25,16 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.preview %}
+      {% if entry.preview or entry.preview_video %}
         <div class="publication-preview">
           {% if entry.arxiv %}
             <span class="publication-preview-label">ArXiv</span>
           {% endif %}
-          {% if entry.preview contains '://' %}
+          {% if entry.preview_video %}
+            <video class="preview publication-preview-video z-depth-1 rounded" autoplay muted loop playsinline preload="metadata">
+              <source src="{{ entry.preview_video | relative_url }}" type="video/mp4">
+            </video>
+          {% elsif entry.preview contains '://' %}
             <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
           {% else %}
             {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
