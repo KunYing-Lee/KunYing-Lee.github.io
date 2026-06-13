@@ -6,7 +6,7 @@ subtitle: Undergraduate Student at <a href='https://www.tsinghua.edu.cn/en/'>Tsi
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: avatar.png
   image_circular: false
   address: >
     Department of Computer Science and Technology<br>

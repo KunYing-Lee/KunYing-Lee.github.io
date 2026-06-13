@@ -284,6 +284,125 @@ ul.task-list input[type="checkbox"] {
   margin-top: 0.75rem;
 }
 
+.home-layout {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  column-gap: 3.25rem;
+  align-items: start;
+}
+
+.home-sidebar {
+  position: sticky;
+  top: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  figure {
+    width: 11.35rem;
+    margin: 0 0 1.15rem;
+  }
+
+  picture {
+    display: block;
+  }
+
+  .home-sidebar-avatar {
+    display: block;
+    width: 11.35rem;
+    height: 11.35rem;
+    border: 0.32rem solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 54%;
+    box-shadow: 0 0.35rem 1.1rem rgba(0, 0, 0, 0.16);
+  }
+
+  .home-sidebar-name {
+    margin: 0 0 0.35rem;
+    color: #003b73;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .home-sidebar-line {
+    margin-top: 0.38rem;
+    color: var(--global-text-color);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+}
+
+.home-sidebar-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--global-theme-color);
+    border-bottom: 0;
+    text-decoration: none;
+    transform-origin: center;
+    transition:
+      color 0.18s ease,
+      transform 0.18s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      transform: scale(1.16);
+    }
+  }
+
+  i {
+    font-size: 1.9rem;
+    line-height: 1;
+  }
+}
+
+.home-main {
+  min-width: 0;
+
+  > h2 {
+    font-size: 1.65rem !important;
+    margin-top: 1.65rem;
+    margin-bottom: 1.05rem;
+  }
+
+  > h2:first-child {
+    margin-top: 0;
+  }
+
+  .publications ol.bibliography li > .row {
+    display: grid;
+    grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr);
+    column-gap: 1.6rem;
+    align-items: start;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .publications ol.bibliography li > .row > .abbr,
+  .publications ol.bibliography li > .row > [id] {
+    width: auto;
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+    flex: none;
+  }
+
+  .publications ol.bibliography li > .row > .abbr {
+    margin-bottom: 0;
+  }
+}
+
 .news-timeline-wrapper {
   overflow-x: hidden;
 }
@@ -447,8 +566,8 @@ ul.task-list input[type="checkbox"] {
 
 .experience-item {
   display: grid;
-  grid-template-columns: minmax(9rem, 12rem) minmax(0, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: minmax(7.5rem, 8.5rem) minmax(0, 1fr);
+  gap: 1.35rem;
   align-items: center;
 }
 
@@ -460,6 +579,7 @@ ul.task-list input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 6rem;
   overflow: hidden;
   border-radius: 0.4rem;
   background: var(--global-card-bg-color);
@@ -469,7 +589,7 @@ ul.task-list input[type="checkbox"] {
 .experience-logo img {
   display: block;
   width: 100%;
-  aspect-ratio: 1.42;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -480,7 +600,7 @@ ul.task-list input[type="checkbox"] {
 
 .experience-content h3 {
   margin-bottom: 0.35rem;
-  font-size: 1.45rem;
+  font-size: 1.22rem;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -488,8 +608,8 @@ ul.task-list input[type="checkbox"] {
 .experience-content p {
   margin-bottom: 0.25rem;
   color: var(--global-text-color-light);
-  font-size: 1.18rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .experience-content strong {
@@ -689,6 +809,31 @@ ul.task-list input[type="checkbox"] {
   background: var(--global-theme-color);
 }
 
+@media (max-width: 767px) {
+  .home-layout {
+    display: block;
+  }
+
+  .home-sidebar {
+    position: static;
+    margin-bottom: 1.6rem;
+
+    figure {
+      width: min(60vw, 11.35rem);
+    }
+
+    .home-sidebar-avatar {
+      width: min(60vw, 11.35rem);
+      height: min(60vw, 11.35rem);
+    }
+  }
+
+  .home-main .publications ol.bibliography li > .row {
+    grid-template-columns: 1fr;
+    row-gap: 0.85rem;
+  }
+}
+
 @media (max-width: 576px) {
   .post > .profile {
     float: none !important;
@@ -749,15 +894,16 @@ ul.task-list input[type="checkbox"] {
   }
 
   .experience-logo {
-    max-width: 16rem;
+    max-width: 13rem;
+    height: 5.7rem;
   }
 
   .experience-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.12rem;
   }
 
   .experience-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .news-gallery-card {

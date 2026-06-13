@@ -1,61 +1,39 @@
 ---
 layout: default
 ---
-<div class="post">
-  {% if page.profile %}
-    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-      {% if page.profile.image %}
-        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-        {% if page.profile.image_circular %}
-          {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-        {% else %}
-          {% assign profile_image_class = 'img-fluid z-depth-1
-    rounded' %}
-        {% endif %}
-        {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-    30vw, 95vw"{% endcapture %}
-        {%
-          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-          cache_bust=true
-        %}
-      {% endif %}
-      {% if page.profile.more_info %}
-        <div class="more-info">{{ page.profile.more_info }}</div>
-      {% endif %}
-    </div>
-  {% endif %}
+<div class="post home-layout">
+  <aside class="home-sidebar" aria-label="Profile">
+    {% if page.profile and page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      {%
+        include figure.liquid loading="eager" path=profile_image_path class="home-sidebar-avatar" sizes="180px" alt=page.profile.image
+        cache_bust=true
+      %}
+    {% endif %}
 
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        Kun-Ying Lee <span class="post-title-chinese">(李坤應)</span>
-      {% endif %}
-    </h1>
-    <div class="header-contact">
-      <div class="social-icons">
-        <a href="javascript:void(0)" class="mr-3" title="lky25@mails.tsinghua.edu.cn" onclick="navigator.clipboard.writeText('lky25@mails.tsinghua.edu.cn').then(function() { alert('Email copied to clipboard!'); })">
-          <i class="fas fa-envelope" style="font-size: 2rem;"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?user=KVnfzeYAAAAJ&hl=zh-TW&oi=sra" class="mr-3" title="Google Scholar">
-          <i class="ai ai-google-scholar" style="font-size: 2rem;"></i>
-        </a>
-        <a href="https://linkedin.com/in/kunying-lee" class="mr-3" title="LinkedIn">
-          <i class="fa-brands fa-linkedin" style="font-size: 2rem;"></i>
-        </a>
-        <a href="https://github.com/KunYing-Lee" class="mr-3" title="GitHub">
-          <i class="fa-brands fa-github" style="font-size: 2rem;"></i>
-        </a>
-        <a href="https://x.com/kunying_lee" class="mr-3" title="X">
-          <i class="fa-brands fa-x-twitter" style="font-size: 2rem;"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+    <h1 class="home-sidebar-name">Kun-Ying Lee</h1>
+    <div class="home-sidebar-line">Undergraduate Student</div>
+    <div class="home-sidebar-line">Tsinghua University</div>
+    <div class="home-sidebar-line">lky25@mails.tsinghua.edu.cn</div>
 
-  <article class="about-content">
+    <div class="home-sidebar-icons social-icons" aria-label="Profile links">
+      <a href="https://scholar.google.com/citations?user=KVnfzeYAAAAJ&hl=zh-TW&oi=sra" title="Google Scholar">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+      <a href="https://linkedin.com/in/kunying-lee" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/KunYing-Lee" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://x.com/kunying_lee" title="X">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+  </aside>
+
+  <article class="about-content home-main">
+    <h2 id="about">About Me</h2>
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
