@@ -29,7 +29,55 @@ layout: default
       <a href="https://x.com/kunying_lee" title="X">
         <i class="fa-brands fa-x-twitter"></i>
       </a>
+      <details class="home-wechat-popover">
+        <summary title="WeChat" aria-label="WeChat">
+          <i class="fa-brands fa-weixin"></i>
+        </summary>
+        <div class="home-wechat-card" role="img" aria-label="WeChat QR code">
+          <img src="{{ '/assets/img/wechat.jpg' | relative_url }}" alt="WeChat QR code" loading="lazy">
+        </div>
+      </details>
     </div>
+    <script>
+      (function () {
+        function closeWechatPopover(popover) {
+          if (!popover.open || popover.classList.contains("is-closing")) {
+            return;
+          }
+
+          popover.classList.add("is-closing");
+          popover.addEventListener(
+            "animationend",
+            function () {
+              popover.classList.remove("is-closing");
+              popover.removeAttribute("open");
+            },
+            { once: true }
+          );
+        }
+
+        document.querySelectorAll(".home-wechat-popover > summary").forEach(function (summary) {
+          summary.addEventListener("click", function (event) {
+            var popover = summary.parentElement;
+            event.preventDefault();
+
+            if (popover.open) {
+              closeWechatPopover(popover);
+            } else {
+              popover.setAttribute("open", "");
+            }
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          document.querySelectorAll(".home-wechat-popover[open]").forEach(function (popover) {
+            if (!popover.contains(event.target)) {
+              closeWechatPopover(popover);
+            }
+          });
+        });
+      })();
+    </script>
   </aside>
 
   <article class="about-content home-main">

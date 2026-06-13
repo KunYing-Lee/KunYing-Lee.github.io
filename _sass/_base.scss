@@ -322,7 +322,7 @@ ul.task-list input[type="checkbox"] {
   .home-sidebar-name {
     margin: 0 0 0.35rem;
     color: #003b73;
-    font-size: 1.55rem;
+    font-size: 1.68rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -330,23 +330,27 @@ ul.task-list input[type="checkbox"] {
   .home-sidebar-line {
     margin-top: 0.38rem;
     color: var(--global-text-color);
-    font-size: 0.98rem;
+    font-size: 1.05rem;
     line-height: 1.6;
   }
 }
 
 .home-sidebar-icons {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 0.85rem;
   margin-top: 0.85rem;
 
-  a {
+  a,
+  summary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--global-theme-color);
     border-bottom: 0;
+    cursor: pointer;
+    list-style: none;
     text-decoration: none;
     transform-origin: center;
     transition:
@@ -361,9 +365,73 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
   i {
     font-size: 1.9rem;
     line-height: 1;
+  }
+}
+
+.home-wechat-popover {
+  position: relative;
+}
+
+.home-wechat-card {
+  position: absolute;
+  bottom: calc(100% + 0.85rem);
+  left: 50%;
+  z-index: 5;
+  display: none;
+  width: 11rem;
+  padding: 0.45rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.35rem;
+  box-shadow: 0 0.55rem 1.6rem rgba(0, 0, 0, 0.18);
+  transform: translateX(-50%) translateY(0) scale(1);
+  transform-origin: bottom center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.2rem;
+  }
+}
+
+.home-wechat-popover[open] .home-wechat-card {
+  display: block;
+  animation: home-wechat-pop 0.18s ease-out both;
+}
+
+.home-wechat-popover[open].is-closing .home-wechat-card {
+  animation: home-wechat-dismiss 0.14s ease-in both;
+}
+
+@keyframes home-wechat-pop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0.45rem) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes home-wechat-dismiss {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0.35rem) scale(0.96);
   }
 }
 
@@ -371,7 +439,7 @@ ul.task-list input[type="checkbox"] {
   min-width: 0;
 
   > h2 {
-    font-size: 1.65rem !important;
+    font-size: 1.78rem !important;
     margin-top: 1.65rem;
     margin-bottom: 1.05rem;
   }
@@ -488,11 +556,24 @@ ul.task-list input[type="checkbox"] {
 }
 
 .news-older-item {
-  display: none;
+  display: grid;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-bottom: 0;
+  transform: translateY(-0.25rem);
+  transition:
+    height 0.24s ease,
+    opacity 0.18s ease,
+    padding-bottom 0.24s ease,
+    transform 0.24s ease;
 }
 
 .news-older-control:checked ~ .news-timeline .news-older-item {
-  display: grid;
+  height: auto;
+  opacity: 1;
+  padding-bottom: 1.35rem;
+  transform: translateY(0);
 }
 
 .news-older-toggle-item {
@@ -511,6 +592,11 @@ ul.task-list input[type="checkbox"] {
 
 .news-older-toggle-marker {
   cursor: pointer;
+  transform-origin: center;
+}
+
+.news-older-toggle-marker.is-toggling {
+  animation: news-marker-tap 0.2s ease-out both;
 }
 
 .news-older-toggle-marker::before {
@@ -525,7 +611,9 @@ ul.task-list input[type="checkbox"] {
   background: transparent;
   content: "";
   box-shadow: none;
-  transition: transform 0.18s ease;
+  transform: rotate(0deg) scale(1);
+  transform-origin: 48% 50%;
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .news-older-toggle-marker::after {
@@ -533,11 +621,16 @@ ul.task-list input[type="checkbox"] {
 }
 
 .news-older-control:checked ~ .news-timeline .news-older-toggle-marker::before {
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1.08);
 }
 
 .news-gallery-toggle-marker {
   cursor: pointer;
+  transform-origin: center;
+}
+
+.news-gallery-toggle-marker.is-toggling {
+  animation: news-marker-tap 0.2s ease-out both;
 }
 
 .news-gallery-toggle-marker::before {
@@ -552,6 +645,28 @@ ul.task-list input[type="checkbox"] {
   background: transparent;
   content: "";
   box-shadow: none;
+  transform: rotate(0deg) scale(1);
+  transform-origin: 48% 50%;
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.news-gallery:has(.news-gallery-control:checked) ~ .news-timeline-marker::before,
+.news-timeline-item:has(.news-gallery-control:checked) .news-gallery-toggle-marker::before {
+  transform: rotate(90deg) scale(1.08);
+}
+
+@keyframes news-marker-tap {
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .news-gallery {
@@ -600,7 +715,7 @@ ul.task-list input[type="checkbox"] {
 
 .experience-content h3 {
   margin-bottom: 0.35rem;
-  font-size: 1.22rem;
+  font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -608,7 +723,7 @@ ul.task-list input[type="checkbox"] {
 .experience-content p {
   margin-bottom: 0.25rem;
   color: var(--global-text-color-light);
-  font-size: 1rem;
+  font-size: 1.08rem;
   line-height: 1.5;
 }
 
@@ -652,11 +767,21 @@ ul.task-list input[type="checkbox"] {
 }
 
 .news-gallery-collapse {
-  display: none;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.25rem);
+  transition:
+    height 0.24s ease,
+    opacity 0.18s ease,
+    transform 0.24s ease;
 }
 
 .news-gallery-control:checked ~ .news-gallery-collapse {
-  display: block;
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .news-gallery-card {
@@ -899,11 +1024,11 @@ ul.task-list input[type="checkbox"] {
   }
 
   .experience-content h3 {
-    font-size: 1.12rem;
+    font-size: 1.18rem;
   }
 
   .experience-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .news-gallery-card {
@@ -1621,7 +1746,7 @@ footer.sticky-bottom {
           justify-content: center;
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
-          font-size: 0.88rem;
+          font-size: 0.95rem;
           font-weight: 500;
           padding-left: 1rem;
           padding-right: 1rem;
@@ -2336,7 +2461,30 @@ mjx-container[jax="CHTML"][display="true"] {
 
 /* Increase base font size */
 body {
-  font-size: 1.1rem;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea,
+.navbar,
+.btn,
+.badge {
+  font-family: "Crimson Pro", serif;
+}
+
+code,
+kbd,
+pre,
+samp,
+.highlight,
+.highlight pre,
+.highlight code {
+  font-family: "Ubuntu Mono", monospace;
 }
 
 /* Increase line height for better readability */
