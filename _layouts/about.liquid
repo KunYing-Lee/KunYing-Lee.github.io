@@ -34,9 +34,7 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-    
-    <div class="header-contact mt-3">
+    <div class="header-contact">
       <div class="social-icons">
         <a href="javascript:void(0)" class="mr-3" title="lky25@mails.tsinghua.edu.cn" onclick="navigator.clipboard.writeText('lky25@mails.tsinghua.edu.cn').then(function() { alert('Email copied to clipboard!'); })">
           <i class="fas fa-envelope" style="font-size: 2rem;"></i>
@@ -50,11 +48,14 @@ layout: default
         <a href="https://github.com/KunYing-Lee" class="mr-3" title="GitHub">
           <i class="fa-brands fa-github" style="font-size: 2rem;"></i>
         </a>
+        <a href="https://x.com/kunying_lee" class="mr-3" title="X">
+          <i class="fa-brands fa-x-twitter" style="font-size: 2rem;"></i>
+        </a>
       </div>
     </div>
   </header>
 
-  <article>
+  <article class="about-content">
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
