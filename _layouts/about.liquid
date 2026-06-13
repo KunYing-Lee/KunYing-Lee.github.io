@@ -31,7 +31,7 @@ layout: default
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
       {% else %}
-        {{ site.title }}
+        Kun-Ying Lee <span class="post-title-chinese">(李坤應)</span>
       {% endif %}
     </h1>
     <div class="header-contact">
@@ -155,6 +155,34 @@ layout: default
         {% endfor %}
       </div>
     </div>
+
+    <!-- Experiences -->
+    <h2 id="experiences" style="margin-top: 2rem;">
+      Experiences
+    </h2>
+    <section class="experiences" aria-label="Experiences">
+      <div class="experience-item">
+        <div class="experience-logo">
+          <img src="{{ '/assets/img/marslab.png' | relative_url }}" alt="MARS Lab logo" loading="lazy">
+        </div>
+        <div class="experience-content">
+          <h3><a href="https://msimchowitz.github.io/" target="_blank" rel="noopener">MARS Lab, Tsinghua University</a></h3>
+          <p><strong>Research Intern:</strong> 2025.12 - Present.</p>
+          <p><strong><em>Topics:</em></strong> <em>Humanoid Locomotion, Foundation Models, VLAs.</em></p>
+          <p><strong>Research Advisor:</strong> Prof. <a href="https://hangzhaomit.github.io/" target="_blank" rel="noopener">Hang Zhao</a>.</p>
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="experience-logo experience-logo-contain">
+          <img src="{{ '/assets/img/thmos.png' | relative_url }}" alt="THMOS logo" loading="lazy">
+        </div>
+        <div class="experience-content">
+          <h3><a href="https://www.thmos.org" target="_blank" rel="noopener">THMOS, Tsinghua University</a></h3>
+          <p><strong>Gait Control Group:</strong> 2025.09 - Present.</p>
+          <p><strong><em>Topics:</em></strong> <em>Football-Oriented Locomotion, Multi-Robot Coordination Logic.</em></p>
+        </div>
+      </div>
+    </section>
 
 
 
