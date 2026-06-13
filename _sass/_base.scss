@@ -343,7 +343,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 .news-timeline-gallery {
-  grid-column: 1 / -1;
+  grid-column: 3;
   min-width: 0;
 }
 
@@ -724,6 +724,7 @@ ul.task-list input[type="checkbox"] {
   }
 
   .news-timeline-gallery {
+    grid-column: 1 / -1;
     width: auto;
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
