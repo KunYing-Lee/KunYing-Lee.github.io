@@ -367,10 +367,13 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-joined-th-mos-robot-soccer-team",
-          title: 'Joined TH-MOS Robot Soccer Team.',
+          title: '🤖 Joined TH-MOS Robot Soccer Team.',
           description: "",
           section: "News",},{id: "news-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
-          title: 'Joined the MARS Lab at Tsinghua IIIS as a research intern, advised by...',
+          title: '🔬 Joined the MARS Lab at Tsinghua IIIS as a research intern, advised...',
+          description: "",
+          section: "News",},{id: "news-omg-is-released",
+          title: '🚀 OMG is released!',
           description: "",
           section: "News",},{id: "projects-dualbot-explorer-project-development",
           title: 'DualBot Explorer Project Development',
