@@ -6,7 +6,7 @@ layout: default
     {% if page.profile and page.profile.image %}
       {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
       {%
-        include figure.liquid loading="eager" path=profile_image_path class="home-sidebar-avatar" sizes="180px" alt=page.profile.image
+        include figure.liquid loading="eager" path=profile_image_path class="home-sidebar-avatar avatar-border-glow" sizes="180px" alt=page.profile.image
         cache_bust=true
       %}
     {% endif %}
@@ -33,8 +33,13 @@ layout: default
         <summary title="WeChat" aria-label="WeChat">
           <i class="fa-brands fa-weixin"></i>
         </summary>
-        <div class="home-wechat-card" role="img" aria-label="WeChat QR code">
-          <img src="{{ '/assets/img/wechat.jpg' | relative_url }}" alt="WeChat QR code" loading="lazy">
+        <div class="home-wechat-card home-wechat-lanyard" role="img" aria-label="WeChat QR code">
+          <div class="home-wechat-lanyard-strap" aria-hidden="true"></div>
+          <div class="home-wechat-lanyard-clip" aria-hidden="true"></div>
+          <div class="home-wechat-lanyard-badge">
+            <div class="home-wechat-lanyard-hole" aria-hidden="true"></div>
+            <img src="{{ '/assets/img/wechat.jpg' | relative_url }}" alt="WeChat QR code" loading="lazy">
+          </div>
         </div>
       </details>
     </div>
@@ -188,7 +193,7 @@ layout: default
     </h2>
     <section class="experiences" aria-label="Experiences">
       <div class="experience-item">
-        <div class="experience-logo">
+        <div class="experience-logo experience-logo-3d" tabindex="0" role="img" aria-label="Interactive MARS Lab logo">
           <img src="{{ '/assets/img/marslab.png' | relative_url }}" alt="MARS Lab logo" loading="lazy">
         </div>
         <div class="experience-content">
@@ -199,7 +204,7 @@ layout: default
         </div>
       </div>
       <div class="experience-item">
-        <div class="experience-logo experience-logo-contain">
+        <div class="experience-logo experience-logo-contain experience-logo-3d" tabindex="0" role="img" aria-label="Interactive THMOS logo">
           <img src="{{ '/assets/img/thmos.png' | relative_url }}" alt="THMOS logo" loading="lazy">
         </div>
         <div class="experience-content">
