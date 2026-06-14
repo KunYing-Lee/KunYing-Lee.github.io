@@ -1019,8 +1019,16 @@ ul.task-list input[type="checkbox"] {
   }
 
   .experience-logo {
-    max-width: 13rem;
-    height: 5.7rem;
+    justify-self: center;
+    width: min(13rem, 62vw);
+    max-width: none;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .experience-logo img {
+    padding: 0.45rem;
+    object-fit: contain;
   }
 
   .experience-content h3 {
