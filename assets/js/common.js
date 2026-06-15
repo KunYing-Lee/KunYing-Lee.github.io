@@ -76,6 +76,15 @@ $(document).ready(function () {
   }
 
   document.querySelectorAll("figure:has(.avatar-border-glow)").forEach(function (avatarFrame) {
+    const setAvatarGlowIntensity = function (intensity) {
+      avatarFrame.style.setProperty("--avatar-glow-intensity", intensity.toString());
+      avatarFrame.style.setProperty("--avatar-glow-alpha-72", (intensity * 0.72).toFixed(4));
+      avatarFrame.style.setProperty("--avatar-glow-alpha-86", (intensity * 0.86).toFixed(4));
+      avatarFrame.style.setProperty("--avatar-glow-alpha-70", (intensity * 0.7).toFixed(4));
+      avatarFrame.style.setProperty("--avatar-glow-alpha-90", (intensity * 0.9).toFixed(4));
+      avatarFrame.style.setProperty("--avatar-glow-alpha-16", (intensity * 0.16).toFixed(4));
+    };
+
     const updateAvatarBorderGlow = function (event) {
       const rect = avatarFrame.getBoundingClientRect();
       const x = event.clientX - rect.left - rect.width / 2;
@@ -83,12 +92,12 @@ $(document).ready(function () {
       const angle = Math.atan2(y, x) * (180 / Math.PI) + 90;
 
       avatarFrame.style.setProperty("--avatar-glow-angle", `${angle.toFixed(2)}deg`);
-      avatarFrame.style.setProperty("--avatar-glow-intensity", "1");
+      setAvatarGlowIntensity(1);
     };
 
     const resetAvatarBorderGlow = function () {
       avatarFrame.style.setProperty("--avatar-glow-angle", "120deg");
-      avatarFrame.style.setProperty("--avatar-glow-intensity", "0.62");
+      setAvatarGlowIntensity(0.62);
     };
 
     avatarFrame.addEventListener("pointermove", updateAvatarBorderGlow);
@@ -440,6 +449,14 @@ $(document).ready(function () {
   document.querySelectorAll(".publications ol.bibliography").forEach(function (bibliography) {
     let activePublicationBentoCard = null;
 
+    const setPublicationBentoIntensity = function (card, intensity) {
+      card.style.setProperty("--publication-glow-intensity", intensity.toString());
+      card.style.setProperty("--publication-glow-alpha-16", (intensity * 0.16).toFixed(4));
+      card.style.setProperty("--publication-glow-alpha-05", (intensity * 0.05).toFixed(4));
+      card.style.setProperty("--publication-glow-alpha-08", (intensity * 0.08).toFixed(4));
+      card.style.setProperty("--publication-glow-alpha-20", (intensity * 0.2).toFixed(4));
+    };
+
     const updatePublicationBentoCard = function (card, clientX, clientY) {
       const rect = card.getBoundingClientRect();
       const relativeX = ((clientX - rect.left) / rect.width) * 100;
@@ -447,7 +464,7 @@ $(document).ready(function () {
 
       card.style.setProperty("--publication-glow-x", `${relativeX.toFixed(1)}%`);
       card.style.setProperty("--publication-glow-y", `${relativeY.toFixed(1)}%`);
-      card.style.setProperty("--publication-glow-intensity", "1");
+      setPublicationBentoIntensity(card, 1);
     };
 
     bibliography.addEventListener("mousemove", function (event) {
@@ -458,7 +475,7 @@ $(document).ready(function () {
       }
 
       if (activePublicationBentoCard && activePublicationBentoCard !== card) {
-        activePublicationBentoCard.style.setProperty("--publication-glow-intensity", "0");
+        setPublicationBentoIntensity(activePublicationBentoCard, 0);
       }
 
       activePublicationBentoCard = card;
@@ -467,7 +484,7 @@ $(document).ready(function () {
 
     bibliography.addEventListener("mouseleave", function () {
       if (activePublicationBentoCard) {
-        activePublicationBentoCard.style.setProperty("--publication-glow-intensity", "0");
+        setPublicationBentoIntensity(activePublicationBentoCard, 0);
         activePublicationBentoCard = null;
       }
     });
