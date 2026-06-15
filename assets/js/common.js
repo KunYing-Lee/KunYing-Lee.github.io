@@ -61,14 +61,17 @@ $(document).ready(function () {
       const rect = navbar.getBoundingClientRect();
       const x = ((event.clientX - rect.left) / rect.width) * 100;
       const y = ((event.clientY - rect.top) / rect.height) * 100;
+      const shift = (x - 50) * 0.08;
 
       navbar.style.setProperty("--navbar-glass-x", `${x.toFixed(1)}%`);
       navbar.style.setProperty("--navbar-glass-y", `${y.toFixed(1)}%`);
+      navbar.style.setProperty("--navbar-glass-shift", `${shift.toFixed(2)}%`);
     };
 
     const resetNavbarGlass = function () {
       navbar.style.setProperty("--navbar-glass-x", "50%");
       navbar.style.setProperty("--navbar-glass-y", "50%");
+      navbar.style.setProperty("--navbar-glass-shift", "0%");
     };
 
     navbar.addEventListener("pointermove", updateNavbarGlass);

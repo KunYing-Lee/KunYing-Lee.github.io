@@ -1364,6 +1364,7 @@ html[data-theme="dark"] .home-wechat-lanyard-hole {
 .navbar {
   --navbar-glass-x: 50%;
   --navbar-glass-y: 50%;
+  --navbar-glass-shift: 0%;
 
   isolation: isolate;
   overflow: visible;
@@ -1394,7 +1395,7 @@ html[data-theme="dark"] .home-wechat-lanyard-hole {
     linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(0, 86, 179, 0.16), rgba(255, 255, 255, 0)),
     repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.2) 0 1px, rgba(255, 255, 255, 0) 1px 18px);
   opacity: 0.5;
-  transform: translateX(calc((var(--navbar-glass-x) - 50%) * 0.08));
+  transform: translateX(var(--navbar-glass-shift));
   transition: opacity 0.2s ease;
 }
 
