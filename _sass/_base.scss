@@ -334,9 +334,9 @@ ul.task-list input[type="checkbox"] {
       conic-gradient(
         from var(--avatar-glow-angle),
         rgba(56, 189, 248, 0),
-        rgba(56, 189, 248, calc(0.72 * var(--avatar-glow-intensity))),
-        rgba(192, 132, 252, calc(0.86 * var(--avatar-glow-intensity))),
-        rgba(244, 114, 182, calc(0.7 * var(--avatar-glow-intensity))),
+        rgba(56, 189, 248, calc(0.72 * #{var(--avatar-glow-intensity)})),
+        rgba(192, 132, 252, calc(0.86 * #{var(--avatar-glow-intensity)})),
+        rgba(244, 114, 182, calc(0.7 * #{var(--avatar-glow-intensity)})),
         rgba(56, 189, 248, 0) 34%
       );
     filter: blur(0.35rem);
@@ -353,9 +353,9 @@ ul.task-list input[type="checkbox"] {
       conic-gradient(
         from var(--avatar-glow-angle),
         rgba(56, 189, 248, 0.22),
-        rgba(56, 189, 248, calc(0.9 * var(--avatar-glow-intensity))),
-        rgba(192, 132, 252, calc(0.9 * var(--avatar-glow-intensity))),
-        rgba(244, 114, 182, calc(0.72 * var(--avatar-glow-intensity))),
+        rgba(56, 189, 248, calc(0.9 * #{var(--avatar-glow-intensity)})),
+        rgba(192, 132, 252, calc(0.9 * #{var(--avatar-glow-intensity)})),
+        rgba(244, 114, 182, calc(0.72 * #{var(--avatar-glow-intensity)})),
         rgba(56, 189, 248, 0.22) 38%,
         rgba(56, 189, 248, 0.12)
       ) border-box;
@@ -380,7 +380,7 @@ ul.task-list input[type="checkbox"] {
     object-position: center 54%;
     box-shadow:
       0 0.35rem 1.1rem rgba(0, 0, 0, 0.16),
-      0 0 1.35rem rgba(56, 189, 248, calc(0.16 * var(--avatar-glow-intensity)));
+      0 0 1.35rem rgba(56, 189, 248, calc(0.16 * #{var(--avatar-glow-intensity)}));
   }
 
   .home-sidebar-name {
@@ -2055,14 +2055,14 @@ footer.sticky-bottom {
       background:
         radial-gradient(
           circle at var(--publication-glow-x) var(--publication-glow-y),
-          rgba(var(--publication-glow-color), calc(var(--publication-glow-intensity) * 0.16)),
-          rgba(var(--publication-glow-color), calc(var(--publication-glow-intensity) * 0.05)) 34%,
+          rgba(var(--publication-glow-color), calc(#{var(--publication-glow-intensity)} * 0.16)),
+          rgba(var(--publication-glow-color), calc(#{var(--publication-glow-intensity)} * 0.05)) 34%,
           transparent 62%
         ),
         rgba(255, 255, 255, 0.018);
       box-shadow:
-        0 0 0 1px rgba(var(--publication-glow-color), calc(var(--publication-glow-intensity) * 0.16)),
-        0 0.35rem 1.2rem rgba(0, 0, 0, calc(var(--publication-glow-intensity) * 0.08));
+        0 0 0 1px rgba(var(--publication-glow-color), calc(#{var(--publication-glow-intensity)} * 0.16)),
+        0 0.35rem 1.2rem rgba(0, 0, 0, calc(#{var(--publication-glow-intensity)} * 0.08));
       transform: translateY(0);
       transition:
         background 0.22s ease,
@@ -2078,7 +2078,7 @@ footer.sticky-bottom {
           linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.12) 22%, transparent 44%),
           radial-gradient(
             circle at var(--publication-glow-x) var(--publication-glow-y),
-            rgba(var(--publication-glow-color), calc(var(--publication-glow-intensity) * 0.2)),
+            rgba(var(--publication-glow-color), calc(#{var(--publication-glow-intensity)} * 0.2)),
             transparent 46%
           );
         content: "";
