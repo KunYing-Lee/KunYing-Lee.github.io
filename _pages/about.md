@@ -27,10 +27,10 @@ latest_posts:
   limit: 3 
 ---
 
-I am a first-year undergraduate student at **[IIIS (Yao Class)](https://iiis.tsinghua.edu.cn/en/)**, **[Tsinghua University](https://www.tsinghua.edu.cn/en/)**, majoring in Computer Science (Artificial Intelligence Track).
+I am a sophomore undergraduate student at **[IIIS (Yao Class)](https://iiis.tsinghua.edu.cn/en/)**, **[Tsinghua University](https://www.tsinghua.edu.cn/en/)**, majoring in Computer Science (Artificial Intelligence Track).
 
 Currently, I am a research intern at the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://hangzhaomit.github.io)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
 
-Additionally, I am a member of the <a href="https://www.thmos.org" target="_blank" rel="noopener" style="color: var(--global-theme-color); font-weight: 700;">TH-MOS</a> (Tsinghua Master of Soccer) robot soccer team, working on Gait Control algorithms for competitive robots.
+Additionally, I lead the Gait Control Group at <a href="https://www.thmos.org" target="_blank" rel="noopener" style="color: var(--global-theme-color); font-weight: 700;">TH-MOS</a> (Tsinghua Master of Soccer), working on gait control algorithms for competitive robots.
 
-Outside of research, I am a passionate pianist and a member of the **Tsinghua University Clavier Team**. I also enjoy playing frisbee.
+Outside of research, I am a passionate pianist, a member of the **Tsinghua University Clavier Team**, and a bass singer in the **Yongheng Choir**. I also enjoy playing frisbee.

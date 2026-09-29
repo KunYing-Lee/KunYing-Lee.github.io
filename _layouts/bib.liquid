@@ -27,8 +27,8 @@
       {% endif %}
       {% if entry.preview or entry.preview_video %}
         <div class="publication-preview">
-          {% if entry.arxiv %}
-            <span class="publication-preview-label">ArXiv</span>
+          {% if entry.preview_label %}
+            <span class="publication-preview-label">{{ entry.preview_label }}</span>
           {% endif %}
           {% if entry.preview_video %}
             <video class="preview publication-preview-video z-depth-1 rounded" autoplay muted loop playsinline preload="metadata">
@@ -196,8 +196,15 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
-      {{ periodical | strip }}
+      {% if entry.publication_status %}
+        <em>{{ entry.publication_status }}</em>
+      {% else %}
+        {{ periodical | strip }}
+      {% endif %}
     </div>
+    {% if entry.publication_highlight %}
+      <div class="publication-highlight"><strong><em>{{ entry.publication_highlight }}</em></strong></div>
+    {% endif %}
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
@@ -255,6 +262,9 @@
       {% endif %}
       {% if entry.code %}
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+      {% endif %}
+      {% if entry.data %}
+        <a href="{{ entry.data }}" class="btn btn-sm z-depth-0" role="button">Data</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
