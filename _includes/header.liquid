@@ -46,6 +46,9 @@
           <li class="nav-item home-section-nav-item" data-home-section-nav="projects">
             <a class="nav-link" href="{{ '/' | relative_url }}#projects">Projects</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/assets/pdf/Kun-Ying-Lee-CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
+          </li>
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
