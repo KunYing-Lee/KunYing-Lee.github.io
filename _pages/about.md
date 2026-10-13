@@ -29,7 +29,7 @@ latest_posts:
 
 I am a sophomore undergraduate student at **[IIIS (Yao Class)](https://iiis.tsinghua.edu.cn/en/)**, **[Tsinghua University](https://www.tsinghua.edu.cn/en/)**, majoring in Computer Science (Artificial Intelligence Track).
 
-Currently, I am a research intern at the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://hangzhaomit.github.io)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
+Currently, I am a research assistant at the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://hangzhaomit.github.io)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
 
 Additionally, I lead the Gait Control Group at <a href="https://www.thmos.org" target="_blank" rel="noopener" style="color: var(--global-theme-color); font-weight: 700;">TH-MOS</a> (Tsinghua Master of Soccer), working on gait control algorithms for competitive robots.
 
