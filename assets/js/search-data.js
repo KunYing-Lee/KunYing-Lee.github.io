@@ -369,8 +369,8 @@ ninja.data = [{
             },},{id: "news-joined-th-mos-robot-soccer-team",
           title: '🤖 Joined TH-MOS Robot Soccer Team.',
           description: "",
-          section: "News",},{id: "news-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-intern-advised-by-prof-hang-zhao",
-          title: '🔬 Joined the MARS Lab at Tsinghua IIIS as a research intern, advised...',
+          section: "News",},{id: "news-joined-the-mars-lab-at-tsinghua-iiis-as-a-research-assistant-advised-by-prof-hang-zhao",
+          title: '🔬 Joined the MARS Lab at Tsinghua IIIS as a research assistant, advised...',
           description: "",
           section: "News",},{id: "news-thmos-won-3rd-place-in-robocup-china-open-2026-amp-lsaquo-amp-rsaquo-amp-lsaquo-amp-rsaquo-amp-lsaquo-amp-rsaquo-amp-lsaquo-amp-rsaquo",
           title: '🥉 THMOS won 3rd Place in RoboCup China Open 2026! &amp;amp;lsaquo; &amp;amp;rsaquo; &amp;amp;lsaquo;...',
@@ -414,7 +414,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/pdf/Kun-Ying-Lee-CV.pdf", "_blank");
         },
       },{
         id: 'social-email',
