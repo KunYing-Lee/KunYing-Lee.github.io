@@ -31,6 +31,6 @@ I am a sophomore undergraduate student at **[IIIS (Yao Class)](https://iiis.tsin
 
 Currently, I am a research assistant at the **[MARS Lab](https://group.iiis.tsinghua.edu.cn/~marslab/#/)** at the [Institute for Interdisciplinary Information Sciences (IIIS)](https://iiis.tsinghua.edu.cn/en/), advised by Prof. **[Hang Zhao](https://hangzhaomit.github.io)**. My research interests lie broadly in **Robotics** and **Embodied AI**.
 
-Additionally, I lead the Gait Control Group at <a href="https://www.thmos.org" target="_blank" rel="noopener" style="color: var(--global-theme-color); font-weight: 700;">TH-MOS</a> (Tsinghua Master of Soccer), working on gait control algorithms for competitive robots.
+Additionally, I serve as Gait Control Group Lead and Decision-Making Algorithms Lead at <a href="https://www.thmos.org" target="_blank" rel="noopener" style="color: var(--global-theme-color); font-weight: 700;">TH-MOS</a> (Tsinghua Master of Soccer), working on locomotion control and team decision-making for humanoid robot soccer.
 
 I’m originally from Taoyuan, Taiwan, and grew up in Suzhou, Jiangsu. Outside of research, I enjoy playing the piano and am a member of the **Tsinghua University Clavier Team**. I also sing bass in the **Yongheng Choir** and enjoy playing frisbee.
