@@ -33,4 +33,4 @@ Currently, I am a research assistant at the **[MARS Lab](https://group.iiis.tsin
 
 Additionally, I lead the Gait Control Group at <a href="https://www.thmos.org" target="_blank" rel="noopener" style="color: var(--global-theme-color); font-weight: 700;">TH-MOS</a> (Tsinghua Master of Soccer), working on gait control algorithms for competitive robots.
 
-Outside of research, I am a passionate pianist, a member of the **Tsinghua University Clavier Team**, and a bass singer in the **Yongheng Choir**. I also enjoy playing frisbee.
+I’m originally from Taoyuan, Taiwan, and grew up in Suzhou, Jiangsu. Outside of research, I enjoy playing the piano and am a member of the **Tsinghua University Clavier Team**. I also sing bass in the **Yongheng Choir** and enjoy playing frisbee.
