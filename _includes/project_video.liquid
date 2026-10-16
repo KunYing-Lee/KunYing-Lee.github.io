@@ -1,5 +1,8 @@
 <figure class="project-video">
   <video
+    {% if include.controls %}
+      controls
+    {% endif %}
     autoplay
     muted
     loop

@@ -25,11 +25,11 @@
       <div class="project-dialog-layout">
         <div class="project-dialog-gallery">
           {% assign lead_video = project.media | first %}
-          {% include project_video.liquid path=lead_video.path poster=lead_video.poster label=lead_video.label title=lead_video.title %}
+          {% include project_video.liquid path=lead_video.path poster=lead_video.poster label=lead_video.label title=lead_video.title controls=true %}
           {% if project.media.size > 1 %}
             <div class="project-dialog-secondary">
               {% for video in project.media offset: 1 %}
-                {% include project_video.liquid path=video.path poster=video.poster label=video.label title=video.title %}
+                {% include project_video.liquid path=video.path poster=video.poster label=video.label title=video.title controls=true %}
               {% endfor %}
             </div>
           {% endif %}
