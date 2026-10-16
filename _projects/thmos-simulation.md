@@ -4,6 +4,29 @@ title: TH-MOS Simulation — Robot Sports
 description: A Unity–MuJoCo platform for humanoid soccer simulation and evaluation.
 permalink: /projects/thmos-simulation/
 selected: true
+modal_id: thmos-simulation
+eyebrow: TH-MOS · Simulation & Evaluation
+dialog_intro: An interactive environment connecting humanoid skills, perception, and team decisions. Unity presents the match while native MuJoCo owns the physical motion and contacts.
+metrics:
+  - value: 3v3 & 5v5
+    label: Autonomous humanoid soccer
+  - value: Unity + MuJoCo
+    label: Visualization and native physics
+  - value: Full stack
+    label: Perception · Skills · Decisions
+media:
+  - path: /assets/video/projects/robot-sports-simulation.mp4
+    poster: /assets/img/projects/robot-sports-simulation.jpg
+    label: Simulation
+    title: Robot Sports match demonstration
+highlights:
+  - title: Physics and control
+    text: Integrated learned locomotion, kicking, and recovery controllers into a shared MuJoCo world with Unity visualization.
+  - title: Perception and decisions
+    text: Designed modular decision-to-skill interfaces and per-robot perception pipelines combining YOLO detection with particle-filter-based localization.
+  - title: Match evaluation
+    text: Integrated the HSL GameController and configurable communication latency and packet loss for team-policy evaluation.
+ongoing: Self-play multi-agent reinforcement learning for team decision-making, starting from MAPPO.
 importance: -1
 category: work
 role: Platform Developer · TH-MOS Robot Soccer Team

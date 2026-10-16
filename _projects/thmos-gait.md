@@ -4,6 +4,37 @@ title: TH-MOS Gait & Soccer Skills
 description: Learning and deploying locomotion, shooting, and fall recovery on Booster K1.
 permalink: /projects/thmos-gait/
 selected: true
+modal_id: thmos-gait
+eyebrow: TH-MOS · Learning & Control
+dialog_intro: From learned motion priors to real competition. I develop and deploy locomotion, target-conditioned shooting, and fast recovery policies on Booster K1.
+metrics:
+  - value: 2.0 m/s
+    label: Forward velocity tracking
+  - value: ≤0.5 s
+    label: Full recovery · 30/30 trials
+  - value: 27/30
+    label: Shots within 10 cm of target
+media:
+  - path: /assets/video/projects/thmos-shooting-goal.mp4
+    poster: /assets/img/projects/thmos-shooting-goal.jpg
+    label: Hardware
+    title: Shooting goal at RoboCup
+  - path: /assets/video/projects/thmos-fall-recovery.mp4
+    poster: /assets/img/projects/thmos-fall-recovery.jpg
+    label: Hardware
+    title: Fall recovery on Booster K1
+  - path: /assets/video/projects/thmos-shooting-simulation.mp4
+    poster: /assets/img/projects/thmos-shooting-simulation.jpg
+    label: Simulation
+    title: Target-conditioned shooting
+highlights:
+  - title: Omnidirectional locomotion
+    text: Developed command-conditioned AMP policies. Hardware tracking covers −1.5 to +2.0 m/s forward/backward, ±1.5 m/s laterally, and ±1.7 rad/s in yaw.
+  - title: Target-conditioned shooting
+    text: Policies aim at specified 3D goal-mouth coordinates from positions across a 14 × 9 m field. Separate hardware tests achieved ≤10 cm targeting error in 27 of 30 trials.
+  - title: Fast fall recovery
+    text: Trained an AMP-based policy in MJLab. Full transitions from tested fallen poses to stable standing completed within 0.5 s in all 30 hardware trials.
+ongoing: Onboard-perception-guided curved shots for obstacle avoidance.
 importance: -2
 category: work
 role: Gait Control Group Lead · Decision-Making Algorithms Lead

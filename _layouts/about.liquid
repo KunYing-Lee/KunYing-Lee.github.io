@@ -131,6 +131,9 @@ layout: default
       </div>
     </div>
 
+    {% include project_dialogs.liquid %}
+    <script defer src="{{ '/assets/js/project-dialogs.js' | relative_url | bust_file_cache }}"></script>
+
     <!-- Experiences -->
     <h2 id="experiences" style="margin-top: 2rem;">Experiences</h2>
     <section class="experiences" aria-label="Experiences">

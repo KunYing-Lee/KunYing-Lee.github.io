@@ -1,6 +1,14 @@
 <figure class="project-video">
-  <video controls playsinline preload="metadata" poster="{{ include.poster | relative_url }}" aria-label="{{ include.title | escape }}">
-    <source src="{{ include.path | relative_url }}" type="video/mp4">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="{{ include.poster | relative_url | bust_file_cache }}"
+    aria-label="{{ include.title | escape }}"
+  >
+    <source src="{{ include.path | relative_url | bust_file_cache }}" type="video/mp4">
   </video>
   <figcaption>
     <strong>{{ include.label }}</strong> &middot; {{ include.title }}

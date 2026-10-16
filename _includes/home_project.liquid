@@ -10,16 +10,15 @@
       <div class="col-md-4 project-media-column">
         <video
           class="project-preview-video"
-          controls
           autoplay
           muted
           loop
           playsinline
           preload="metadata"
-          poster="{{ project.poster | relative_url }}"
+          poster="{{ project.poster | relative_url | bust_file_cache }}"
           aria-label="{{ project.preview_label | escape }}"
         >
-          <source src="{{ project.preview_video | relative_url }}" type="video/mp4">
+          <source src="{{ project.preview_video | relative_url | bust_file_cache }}" type="video/mp4">
         </video>
         <p class="project-media-label">{{ project.preview_label }}</p>
       </div>
@@ -30,14 +29,20 @@
     {% endif %}
     <div class="{% if project.preview_video %}col-md-8{% elsif project.img %}col-sm-7 col-md-9{% else %}col-12{% endif %}">
       <h3 class="project-title">
-        <a
-          href="{{ project_link }}"
-          {% if project.github %}
-            target="_blank" rel="noopener noreferrer"
-          {% endif %}
-        >
-          {{- project.title -}}
-        </a>
+        {% if project.selected %}
+          <button type="button" class="project-title-trigger" data-project-dialog="{{ project.modal_id }}" aria-haspopup="dialog">
+            {{ project.title }}
+          </button>
+        {% else %}
+          <a
+            href="{{ project_link }}"
+            {% if project.github %}
+              target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{- project.title -}}
+          </a>
+        {% endif %}
         {% unless project.selected -%}
           <span class="project-date">({{ project.description }})</span>
         {%- endunless %}
@@ -53,7 +58,9 @@
         {% endif %}
       </div>
       {% if project.selected %}
-        <a class="project-detail-link" href="{{ project.url | relative_url }}">View project &amp; videos <span aria-hidden="true">&rarr;</span></a>
+        <button type="button" class="project-detail-link" data-project-dialog="{{ project.modal_id }}" aria-haspopup="dialog">
+          View project &amp; videos <span aria-hidden="true">&rarr;</span>
+        </button>
       {% elsif project.github %}
         <div class="project-links mt-1">
           <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer"
