@@ -46,36 +46,36 @@ layout: default
     <script>
       (function () {
         function closeWechatPopover(popover) {
-          if (!popover.open || popover.classList.contains("is-closing")) {
+          if (!popover.open || popover.classList.contains('is-closing')) {
             return;
           }
 
-          popover.classList.add("is-closing");
+          popover.classList.add('is-closing');
           popover.addEventListener(
-            "animationend",
+            'animationend',
             function () {
-              popover.classList.remove("is-closing");
-              popover.removeAttribute("open");
+              popover.classList.remove('is-closing');
+              popover.removeAttribute('open');
             },
             { once: true }
           );
         }
 
-        document.querySelectorAll(".home-wechat-popover > summary").forEach(function (summary) {
-          summary.addEventListener("click", function (event) {
+        document.querySelectorAll('.home-wechat-popover > summary').forEach(function (summary) {
+          summary.addEventListener('click', function (event) {
             var popover = summary.parentElement;
             event.preventDefault();
 
             if (popover.open) {
               closeWechatPopover(popover);
             } else {
-              popover.setAttribute("open", "");
+              popover.setAttribute('open', '');
             }
           });
         });
 
-        document.addEventListener("click", function (event) {
-          document.querySelectorAll(".home-wechat-popover[open]").forEach(function (popover) {
+        document.addEventListener('click', function (event) {
+          document.querySelectorAll('.home-wechat-popover[open]').forEach(function (popover) {
             if (!popover.contains(event.target)) {
               closeWechatPopover(popover);
             }
@@ -107,38 +107,12 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2 id="publications" style="margin-top: 2rem;">
-        Publications
-      </h2>
+      <h2 id="publications" style="margin-top: 2rem;">Publications</h2>
       {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Projects -->
-    <h2 id="projects" style="margin-top: 2rem;">
-      Projects
-    </h2>
-    <style>
-      .project-img-container {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 15px;
-        right: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .project-img-container figure, 
-      .project-img-container picture {
-        display: contents;
-      }
-      .project-img-container img {
-        max-height: 100%;
-        width: auto;
-        max-width: 100%;
-        object-fit: contain;
-      }
-    </style>
+    <h2 id="projects" style="margin-top: 2rem;">Projects</h2>
     <div class="projects projects-filter content-filter">
       <input class="content-filter-input" id="projects-filter-selected" type="radio" name="projects-filter" checked>
       <input class="content-filter-input" id="projects-filter-all" type="radio" name="projects-filter">
@@ -150,47 +124,15 @@ layout: default
       </div>
 
       <div class="projects-list">
-        {% assign sorted_projects = site.projects | sort: "importance" %}
+        {% assign sorted_projects = site.projects | sort: 'importance' %}
         {% for project in sorted_projects %}
-          <div class="project-item mb-3">
-            <div class="row">
-              {% if project.img %}
-              <div class="col-sm-5 col-md-3 position-relative">
-                <div class="project-img-container">
-                  {% include figure.liquid loading="eager" path=project.img sizes="200px" alt="project thumbnail" class="img-fluid rounded z-depth-1" %}
-                </div>
-              </div>
-              <div class="col-sm-7 col-md-9">
-              {% else %}
-              <div class="col-12">
-              {% endif %}
-
-                <h5 class="mb-1"><strong><a href="{{ project.github }}" target="_blank" style="color: inherit; text-decoration: none;">{{ project.title }}</a></strong> <span class="text-muted" style="font-size: 0.9em;">({{ project.description }})</span></h5>
-                <div class="project-content">
-                  {{ project.content }}
-                </div>
-                {% if project.github %}
-                  <div class="project-links mt-1">
-                     <a href="{{ project.github }}" target="_blank" style="color: inherit; text-decoration: none;">
-                        <i class="fa-brands fa-github"></i> {{ project.github | remove: "https://" | remove: "http://" }}
-                     </a>
-                  </div>
-                {% endif %}
-
-              </div> <!-- End col text -->
-            </div> <!-- End row -->
-          </div>
-          {% unless forloop.last %}
-          <hr class="my-3" style="border-top: 1px dashed var(--global-divider-color);">
-          {% endunless %}
+          {% include home_project.liquid project=project %}
         {% endfor %}
       </div>
     </div>
 
     <!-- Experiences -->
-    <h2 id="experiences" style="margin-top: 2rem;">
-      Experiences
-    </h2>
+    <h2 id="experiences" style="margin-top: 2rem;">Experiences</h2>
     <section class="experiences" aria-label="Experiences">
       <div class="experience-item">
         <div class="experience-logo experience-logo-3d" tabindex="0" role="img" aria-label="Interactive MARS Lab logo">
@@ -199,7 +141,9 @@ layout: default
         <div class="experience-content">
           <h3><a href="https://msimchowitz.github.io/" target="_blank" rel="noopener">MARS Lab, Tsinghua University</a></h3>
           <p><strong>Research Assistant:</strong> 2025.12 - Present.</p>
-          <p><strong><em>Topics:</em></strong> <em>Humanoid Locomotion, Foundation Models, VLAs.</em></p>
+          <p>
+            <strong><em>Topics:</em></strong> <em>Humanoid Locomotion, Foundation Models, VLAs.</em>
+          </p>
           <p><strong>Research Advisor:</strong> Prof. <a href="https://hangzhaomit.github.io/" target="_blank" rel="noopener">Hang Zhao</a>.</p>
         </div>
       </div>
@@ -210,12 +154,12 @@ layout: default
         <div class="experience-content">
           <h3><a href="https://www.thmos.org" target="_blank" rel="noopener">THMOS, Tsinghua University</a></h3>
           <p><strong>Lead, Gait Control Group:</strong> 2025.09 - Present.</p>
-          <p><strong><em>Topics:</em></strong> <em>Soccer-Oriented Locomotion, Multi-Robot Coordination Logic.</em></p>
+          <p>
+            <strong><em>Topics:</em></strong> <em>Soccer-Oriented Locomotion, Multi-Robot Coordination Logic.</em>
+          </p>
         </div>
       </div>
     </section>
-
-
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

@@ -1,0 +1,66 @@
+{% assign project = include.project %}
+{% if project.github %}
+  {% assign project_link = project.github %}
+{% else %}
+  {% assign project_link = project.url | relative_url %}
+{% endif %}
+<article class="project-item{% if project.selected %} project-selected{% endif %}">
+  <div class="row align-items-start">
+    {% if project.preview_video %}
+      <div class="col-md-4 project-media-column">
+        <video
+          class="project-preview-video"
+          controls
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="{{ project.poster | relative_url }}"
+          aria-label="{{ project.preview_label | escape }}"
+        >
+          <source src="{{ project.preview_video | relative_url }}" type="video/mp4">
+        </video>
+        <p class="project-media-label">{{ project.preview_label }}</p>
+      </div>
+    {% elsif project.img %}
+      <div class="col-sm-5 col-md-3 project-media-column">
+        {% include figure.liquid loading="lazy" path=project.img sizes="200px" alt=project.title class="img-fluid rounded z-depth-1" %}
+      </div>
+    {% endif %}
+    <div class="{% if project.preview_video %}col-md-8{% elsif project.img %}col-sm-7 col-md-9{% else %}col-12{% endif %}">
+      <h3 class="project-title">
+        <a
+          href="{{ project_link }}"
+          {% if project.github %}
+            target="_blank" rel="noopener noreferrer"
+          {% endif %}
+        >
+          {{- project.title -}}
+        </a>
+        {% unless project.selected -%}
+          <span class="project-date">({{ project.description }})</span>
+        {%- endunless %}
+      </h3>
+      {% if project.role %}
+        <p class="project-role">{{ project.role }}</p>
+      {% endif %}
+      <div class="project-content">
+        {% if project.summary %}
+          <p>{{ project.summary }}</p>
+        {% else %}
+          {{ project.content }}
+        {% endif %}
+      </div>
+      {% if project.selected %}
+        <a class="project-detail-link" href="{{ project.url | relative_url }}">View project &amp; videos <span aria-hidden="true">&rarr;</span></a>
+      {% elsif project.github %}
+        <div class="project-links mt-1">
+          <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-github" aria-hidden="true"></i> {{ project.github | remove: 'https://' | remove: 'http://' -}}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>
