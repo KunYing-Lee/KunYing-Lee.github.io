@@ -404,6 +404,16 @@ ninja.data = [{
           description: "Jun. 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/logisim-risc-cpu/";
+            },},{id: "projects-th-mos-gait-amp-soccer-skills",
+          title: 'TH-MOS Gait &amp;amp; Soccer Skills',
+          description: "Learning and deploying locomotion, shooting, and fall recovery on Booster K1.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thmos-gait/";
+            },},{id: "projects-th-mos-simulation-robot-sports",
+          title: 'TH-MOS Simulation — Robot Sports',
+          description: "A Unity–MuJoCo platform for humanoid soccer simulation and evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thmos-simulation/";
             },},{id: "projects-uav-based-food-delivery-routing-for-tsinghua-university",
           title: 'UAV-Based Food-Delivery Routing For Tsinghua University',
           description: "Aug. 2025",
