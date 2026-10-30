@@ -1,0 +1,10 @@
+{% if include.project.links %}
+  <p class="project-links">
+    {% for link in include.project.links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      {% unless forloop.last -%}
+        <span aria-hidden="true"> &middot; </span>
+      {%- endunless %}
+    {% endfor %}
+  </p>
+{% endif %}

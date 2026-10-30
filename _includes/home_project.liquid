@@ -57,6 +57,7 @@
           {{ project.content }}
         {% endif %}
       </div>
+      {% include project_links.liquid project=project %}
       {% if project.selected %}
         <button type="button" class="project-detail-link" data-project-dialog="{{ project.modal_id }}" aria-haspopup="dialog">
           View project &amp; videos <span aria-hidden="true">&rarr;</span>

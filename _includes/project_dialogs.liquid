@@ -14,6 +14,7 @@
     </header>
     <div class="project-dialog-body">
       <p class="project-dialog-intro">{{ project.dialog_intro }}</p>
+      {% include project_links.liquid project=project %}
       <div class="project-dialog-metrics">
         {% for metric in project.metrics %}
           <div class="project-dialog-metric">
@@ -42,10 +43,12 @@
               <p>{{ highlight.text }}</p>
             </section>
           {% endfor %}
-          <div class="project-dialog-next">
-            <h3>Ongoing work</h3>
-            <p>{{ project.ongoing }}</p>
-          </div>
+          {% if project.ongoing %}
+            <div class="project-dialog-next">
+              <h3>Ongoing work</h3>
+              <p>{{ project.ongoing }}</p>
+            </div>
+          {% endif %}
         </aside>
       </div>
     </div>
