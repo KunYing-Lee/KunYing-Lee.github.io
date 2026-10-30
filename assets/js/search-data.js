@@ -407,6 +407,11 @@ ninja.data = [{
           description: "Jun. 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/logisim-risc-cpu/";
+            },},{id: "projects-supermimic-on-mjlab-model-based-humanoid-motion-tracking",
+          title: 'SuperMimic on mjlab: Model-Based Humanoid Motion Tracking',
+          description: "Differentiable-world-model motion tracking on native MuJoCo-Warp.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/supermimic/";
             },},{id: "projects-th-mos-gait-amp-soccer-skills",
           title: 'TH-MOS Gait &amp;amp; Soccer Skills',
           description: "Learning and deploying locomotion, shooting, and fall recovery on Booster K1.",
