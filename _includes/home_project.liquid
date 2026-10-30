@@ -58,11 +58,7 @@
         {% endif %}
       </div>
       {% include project_links.liquid project=project %}
-      {% if project.selected %}
-        <button type="button" class="project-detail-link" data-project-dialog="{{ project.modal_id }}" aria-haspopup="dialog">
-          View project &amp; videos <span aria-hidden="true">&rarr;</span>
-        </button>
-      {% elsif project.github %}
+      {% if project.github and project.selected != true %}
         <div class="project-links mt-1">
           <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer"
             ><i class="fa-brands fa-github" aria-hidden="true"></i> {{ project.github | remove: 'https://' | remove: 'http://' -}}
