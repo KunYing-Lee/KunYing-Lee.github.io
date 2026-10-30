@@ -16,11 +16,13 @@
           playsinline
           preload="metadata"
           poster="{{ project.poster | relative_url | bust_file_cache }}"
-          aria-label="{{ project.preview_label | escape }}"
+          aria-label="{{ project.preview_label | default: project.title | escape }}"
         >
           <source src="{{ project.preview_video | relative_url | bust_file_cache }}" type="video/mp4">
         </video>
-        <p class="project-media-label">{{ project.preview_label }}</p>
+        {% if project.preview_label %}
+          <p class="project-media-label">{{ project.preview_label }}</p>
+        {% endif %}
       </div>
     {% elsif project.img %}
       <div class="col-sm-5 col-md-3 project-media-column">
@@ -29,7 +31,7 @@
     {% endif %}
     <div class="{% if project.preview_video %}col-md-8{% elsif project.img %}col-sm-7 col-md-9{% else %}col-12{% endif %}">
       <h3 class="project-title">
-        {% if project.selected %}
+        {% if project.selected and project.modal_id %}
           <button type="button" class="project-title-trigger" data-project-dialog="{{ project.modal_id }}" aria-haspopup="dialog">
             {{ project.title }}
           </button>
