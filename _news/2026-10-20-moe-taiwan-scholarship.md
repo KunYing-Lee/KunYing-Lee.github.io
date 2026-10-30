@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎓 I received the **Ministry of Education Scholarship for Taiwan Students (First Prize)**.
+🎓 I received the **Ministry of Education Scholarship for Taiwan Students (First Prize, Top 2 Schoolwide)**.
