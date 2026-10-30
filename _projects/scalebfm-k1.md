@@ -7,7 +7,7 @@ selected: true
 github: https://github.com/KunYing-Lee/ScaleBFM-K1
 importance: -4
 category: work
-summary: Adapted ScaleBFM-based motion tracking to the 22-DoF Booster K1, achieving over 95% full-clip completion on the BONES-SEED test set after 5 hours of training on a single node with 8 NVIDIA A10 GPUs. Built and validated a large-scale BONES-SEED/LAFAN1 motion-data pipeline with morphology-consistent conversion and differentiable kinematics.
+summary: Adapted ScaleBFM-based motion tracking to the 22-DoF Booster K1, achieving over 95% full-clip completion on the BONES-SEED test set after 5 hours of training on a single node with 8 NVIDIA A10 GPUs.
 preview_video: /assets/video/projects/scalebfm-k1-demo.mp4
 poster: /assets/img/projects/scalebfm-k1-demo.jpg
 ---
