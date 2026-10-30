@@ -407,6 +407,11 @@ ninja.data = [{
           description: "Jun. 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/logisim-risc-cpu/";
+            },},{id: "projects-scalebfm-k1-large-scale-humanoid-motion-tracking",
+          title: 'ScaleBFM-K1: Large-Scale Humanoid Motion Tracking',
+          description: "Model-based motion tracking and large-scale training for Booster K1.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/scalebfm-k1/";
             },},{id: "projects-supermimic-on-mjlab-model-based-humanoid-motion-tracking",
           title: 'SuperMimic on mjlab: Model-Based Humanoid Motion Tracking',
           description: "Differentiable-world-model motion tracking on native MuJoCo-Warp.",
