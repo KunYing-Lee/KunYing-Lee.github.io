@@ -20,7 +20,7 @@
         >
           <source src="{{ project.preview_video | relative_url | bust_file_cache }}" type="video/mp4">
         </video>
-        {% if project.preview_label %}
+        {% if project.preview_label and project.selected != true %}
           <p class="project-media-label">{{ project.preview_label }}</p>
         {% endif %}
       </div>
@@ -49,7 +49,7 @@
           <span class="project-date">({{ project.description }})</span>
         {%- endunless %}
       </h3>
-      {% if project.role %}
+      {% if project.role and project.selected != true %}
         <p class="project-role">{{ project.role }}</p>
       {% endif %}
       <div class="project-content">
