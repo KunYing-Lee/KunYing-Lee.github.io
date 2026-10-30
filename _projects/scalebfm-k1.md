@@ -14,7 +14,7 @@ poster: /assets/img/projects/scalebfm-k1-demo.jpg
 
 Adapted ScaleBFM-based motion tracking to the **22-DoF Booster K1**, achieving **over 95% full-clip completion on the BONES-SEED test set after 5 hours of training on a single node with 8 NVIDIA A10 GPUs**.
 
-{% include project_video.liquid path="/assets/video/projects/scalebfm-k1-demo.mp4" poster="/assets/img/projects/scalebfm-k1-demo.jpg" label="Simulation" title="K1 motion-tracking demonstrations" controls=true %}
+{% include project_video.liquid path="/assets/video/projects/scalebfm-k1-demo.mp4" poster="/assets/img/projects/scalebfm-k1-demo.jpg" label="Simulation & Hardware" title="K1 motion tracking in simulation and on the real robot" controls=true %}
 
 ## Implementation
 
