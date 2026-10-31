@@ -16,7 +16,7 @@ metrics:
     label: Shots within 10 cm of target
 media:
   - path: /assets/video/projects/thmos-shooting-demo.mp4
-    poster: /assets/img/projects/thmos-shooting-goal.jpg
+    poster: /assets/img/projects/thmos-shooting-demo.jpg
     title: Shooting at RoboCup and in simulation
   - path: /assets/video/projects/thmos-fall-recovery.mp4
     poster: /assets/img/projects/thmos-fall-recovery.jpg
@@ -36,7 +36,7 @@ category: work
 role: Gait Control Group Lead · Decision-Making Algorithms Lead
 summary: Developed and deployed learned soccer skills on Booster K1, from omnidirectional locomotion and target-conditioned shooting to fast fall recovery. Demonstrations include a RoboCup match goal, real-robot recovery, and shooting in simulation.
 preview_video: /assets/video/projects/thmos-shooting-demo.mp4
-poster: /assets/img/projects/thmos-shooting-goal.jpg
+poster: /assets/img/projects/thmos-shooting-demo.jpg
 preview_label: Shooting on Booster K1
 ---
 
@@ -48,7 +48,7 @@ I develop learning-based control for humanoid soccer, spanning command-condition
 
 The video combines a goal scored during an international RoboCup match with target-conditioned shooting in simulation.
 
-{% include project_video.liquid path="/assets/video/projects/thmos-shooting-demo.mp4" poster="/assets/img/projects/thmos-shooting-goal.jpg" title="Shooting at RoboCup and in simulation" controls=true %}
+{% include project_video.liquid path="/assets/video/projects/thmos-shooting-demo.mp4" poster="/assets/img/projects/thmos-shooting-demo.jpg" title="Shooting at RoboCup and in simulation" controls=true %}
 
 ## Fall recovery
 
