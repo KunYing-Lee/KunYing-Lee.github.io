@@ -14,7 +14,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </header>
-    <div class="project-dialog-body">
+    <div class="project-dialog-body{% if project.compact_intro %} project-dialog-body-compact{% endif %}">
       <p class="project-dialog-intro">{{ project.dialog_intro }}</p>
       {% include project_links.liquid project=project %}
       {% if project.metrics %}

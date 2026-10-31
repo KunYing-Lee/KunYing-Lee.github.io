@@ -7,11 +7,11 @@ selected: true
 modal_id: thmos-simulation
 eyebrow: TH-MOS · Simulation & Evaluation
 dialog_intro: An interactive environment connecting humanoid skills, perception, and team decisions. Unity presents the match while native MuJoCo owns the physical motion and contacts.
+compact_intro: true
 media:
-  - path: /assets/video/projects/robot-sports-simulation.mp4
-    poster: /assets/img/projects/robot-sports-simulation.jpg
-    label: Simulation
-    title: Robot Sports match demonstration
+  - path: /assets/video/projects/robot-sports-11v11-highlights.mp4
+    poster: /assets/img/projects/robot-sports-11v11-highlights.jpg
+    title: 11v11 humanoid soccer highlights
 highlights:
   - title: Physics and control
     text: Integrated learned locomotion, kicking, and recovery controllers into a shared MuJoCo world with Unity visualization.
@@ -30,7 +30,7 @@ preview_label: Simulation · Robot Sports
 
 I developed Robot Sports to connect humanoid control and team decision-making in an interactive soccer environment. The platform combines Unity visualization with native MuJoCo physics and supports autonomous 3v3, 5v5, and 11v11 matches.
 
-{% include project_video.liquid path="/assets/video/projects/robot-sports-simulation.mp4" poster="/assets/img/projects/robot-sports-simulation.jpg" label="Simulation" title="Robot Sports match demonstration" %}
+{% include project_video.liquid path="/assets/video/projects/robot-sports-11v11-highlights.mp4" poster="/assets/img/projects/robot-sports-11v11-highlights.jpg" title="11v11 humanoid soccer highlights" controls=true %}
 
 ## Platform contributions
 
