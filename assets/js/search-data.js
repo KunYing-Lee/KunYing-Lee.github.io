@@ -387,17 +387,7 @@ ninja.data = [{
           section: "News",},{id: "news-i-received-the-ministry-of-education-scholarship-for-taiwan-students-first-prize-top-2-schoolwide",
           title: '🎓 I received the Ministry of Education Scholarship for Taiwan Students (First Prize,...',
           description: "",
-          section: "News",},{id: "projects-dualbot-explorer-project-development",
-          title: 'DualBot Explorer Project Development',
-          description: "Feb. 2023",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/dualbot-explorer/";
-            },},{id: "projects-ecotracker-android-app-development",
-          title: 'EcoTracker Android App Development',
-          description: "Apr. 2024",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ecotracker/";
-            },},{id: "projects-human-resource-machine",
+          section: "News",},{id: "projects-human-resource-machine",
           title: 'Human Resource Machine',
           description: "Oct. 2025",
           section: "Projects",handler: () => {
@@ -442,11 +432,6 @@ ninja.data = [{
           description: "A Unity–MuJoCo platform for humanoid soccer simulation and evaluation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/thmos-simulation/";
-            },},{id: "projects-uav-based-food-delivery-routing-for-tsinghua-university",
-          title: 'UAV-Based Food-Delivery Routing For Tsinghua University',
-          description: "Aug. 2025",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/uav-routing/";
             },},{
         id: 'social-cv',
         title: 'CV',
