@@ -422,8 +422,8 @@ ninja.data = [{
           description: "Learning and deploying locomotion, shooting, and fall recovery on Booster K1.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/thmos-gait/";
-            },},{id: "projects-th-mos-simulation-robot-sports",
-          title: 'TH-MOS Simulation — Robot Sports',
+            },},{id: "projects-th-mos-simulation",
+          title: 'TH-MOS Simulation',
           description: "A Unity–MuJoCo platform for humanoid soccer simulation and evaluation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/thmos-simulation/";
