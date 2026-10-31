@@ -3392,7 +3392,7 @@ video[role="button"] {
   }
 }
 .video-viewer {
-  width: min(1200px, 94vw);
+  width: fit-content;
   max-width: 94vw;
   max-height: 94dvh;
   padding: 2.8rem 0.5rem 0.5rem;
@@ -3405,8 +3405,10 @@ video[role="button"] {
   }
   .video-viewer-player {
     display: block;
-    width: 100%;
-    max-height: calc(90dvh - 3rem);
+    width: auto;
+    height: auto;
+    max-width: min(1200px, calc(94vw - 1rem));
+    max-height: calc(94dvh - 3.3rem);
     object-fit: contain;
     margin: 0;
     border-radius: 0;
