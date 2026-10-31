@@ -20,6 +20,8 @@
     player.removeAttribute("role");
     player.removeAttribute("title");
     player.className = "video-viewer-player";
+    player.src = video.currentSrc;
+    player.preload = "auto";
     player.controls = true;
     player.muted = true;
     player.autoplay = true;
@@ -42,6 +44,7 @@
     player.style.width = `${video.videoWidth * scale}px`;
     player.style.height = `${video.videoHeight * scale}px`;
     dialog.append(player);
+    player.load();
     dialog.showModal();
     close.focus();
   };
