@@ -3,7 +3,7 @@ layout: page
 title: Human Resource Machine
 description: Oct. 2025
 img: assets/img/projects/HumanResourceMachine.png
-importance: 1
+importance: 3
 category: work
 github: https://github.com/KunYing-Lee/HumanResourceMachine
 ---
