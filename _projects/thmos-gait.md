@@ -15,18 +15,13 @@ metrics:
   - value: 27/30
     label: Shots within 10 cm of target
 media:
-  - path: /assets/video/projects/thmos-shooting-goal.mp4
+  - path: /assets/video/projects/thmos-shooting-demo.mp4
     poster: /assets/img/projects/thmos-shooting-goal.jpg
-    label: Hardware
-    title: Shooting goal at RoboCup
+    title: Shooting at RoboCup and in simulation
   - path: /assets/video/projects/thmos-fall-recovery.mp4
     poster: /assets/img/projects/thmos-fall-recovery.jpg
     label: Hardware
     title: Fall recovery on Booster K1
-  - path: /assets/video/projects/thmos-shooting-simulation.mp4
-    poster: /assets/img/projects/thmos-shooting-simulation.jpg
-    label: Simulation
-    title: Target-conditioned shooting
 contributions_heading: My contributions
 highlights:
   - title: Omnidirectional locomotion
@@ -40,29 +35,26 @@ importance: -2
 category: work
 role: Gait Control Group Lead · Decision-Making Algorithms Lead
 summary: Developed and deployed learned soccer skills on Booster K1, from omnidirectional locomotion and target-conditioned shooting to fast fall recovery. Demonstrations include a RoboCup match goal, real-robot recovery, and shooting in simulation.
-preview_video: /assets/video/projects/thmos-shooting-goal.mp4
+preview_video: /assets/video/projects/thmos-shooting-demo.mp4
 poster: /assets/img/projects/thmos-shooting-goal.jpg
-preview_label: Hardware · RoboCup match goal
+preview_label: Shooting on Booster K1
 ---
 
 **Role:** Gait Control Group Lead · Decision-Making Algorithms Lead, TH-MOS Robot Soccer Team, Tsinghua University.
 
 I develop learning-based control for humanoid soccer, spanning command-conditioned adversarial motion priors (AMP), target-conditioned shooting, and fast fall recovery. My work includes policy training, simulation validation, and deployment on Booster K1.
 
-## On the field
+## Shooting
 
-A goal scored during an international RoboCup match shows the shooting skill in a competitive setting.
+The video combines a goal scored during an international RoboCup match with target-conditioned shooting in simulation.
 
-{% include project_video.liquid path="/assets/video/projects/thmos-shooting-goal.mp4" poster="/assets/img/projects/thmos-shooting-goal.jpg" label="Hardware" title="Shooting goal at RoboCup" %}
+{% include project_video.liquid path="/assets/video/projects/thmos-shooting-demo.mp4" poster="/assets/img/projects/thmos-shooting-goal.jpg" title="Shooting at RoboCup and in simulation" controls=true %}
 
-## Recovery and shooting development
+## Fall recovery
 
-The recovery video shows physical robot testing; the shooting video shows the policy in simulation.
+The recovery video shows physical robot testing on Booster K1.
 
-<div class="project-video-grid">
-  {% include project_video.liquid path="/assets/video/projects/thmos-fall-recovery.mp4" poster="/assets/img/projects/thmos-fall-recovery.jpg" label="Hardware" title="Fall recovery on Booster K1" %}
-  {% include project_video.liquid path="/assets/video/projects/thmos-shooting-simulation.mp4" poster="/assets/img/projects/thmos-shooting-simulation.jpg" label="Simulation" title="Target-conditioned shooting" %}
-</div>
+{% include project_video.liquid path="/assets/video/projects/thmos-fall-recovery.mp4" poster="/assets/img/projects/thmos-fall-recovery.jpg" label="Hardware" title="Fall recovery on Booster K1" %}
 
 ## Methods and hardware evaluation
 
