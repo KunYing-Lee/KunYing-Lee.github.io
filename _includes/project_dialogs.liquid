@@ -40,9 +40,9 @@
           {% endif %}
         </div>
         <aside class="project-dialog-notes" aria-label="Project contributions">
-          {% unless project.modal_id == 'thmos-simulation' %}
-            <h3>My contributions</h3>
-          {% endunless %}
+          {% if project.contributions_heading %}
+            <h3>{{ project.contributions_heading }}</h3>
+          {% endif %}
           {% for highlight in project.highlights %}
             <section class="project-dialog-highlight">
               <h4>{{ highlight.title }}</h4>

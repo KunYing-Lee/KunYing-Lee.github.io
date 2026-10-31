@@ -27,6 +27,7 @@ media:
     poster: /assets/img/projects/thmos-shooting-simulation.jpg
     label: Simulation
     title: Target-conditioned shooting
+contributions_heading: My contributions
 highlights:
   - title: Omnidirectional locomotion
     text: Developed command-conditioned AMP policies. Hardware tracking covers −1.5 to +2.0 m/s forward/backward, ±1.5 m/s laterally, and ±1.7 rad/s in yaw.

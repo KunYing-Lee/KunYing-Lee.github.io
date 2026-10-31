@@ -13,7 +13,9 @@
   >
     <source src="{{ include.path | relative_url | bust_file_cache }}" type="video/mp4">
   </video>
-  <figcaption>
-    <strong>{{ include.label }}</strong> &middot; {{ include.title }}
-  </figcaption>
+  {% if include.label %}
+    <figcaption>
+      <strong>{{ include.label }}</strong> &middot; {{ include.title }}
+    </figcaption>
+  {% endif %}
 </figure>
