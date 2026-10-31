@@ -1,12 +1,12 @@
 ---
 layout: page
-title: TH-MOS Dribbling
+title: Dribbling
 description: Whole-body humanoid dribbling with active vision on Booster K1.
 permalink: /projects/thmos-dribbling/
 selected: true
 modal_id: thmos-dribbling
 eyebrow: TH-MOS · Learning & Control
-dialog_intro: Command-conditioned ball control on Booster K1, combining locomotion, foot–ball interaction, and active head motion in a single whole-body policy.
+dialog_intro: Trained reference-free dribbling on Booster K1 using asymmetric PPO, jointly learning locomotion and head control from ball-velocity commands, proprioception, and camera-frame ball observations.
 media:
   - path: /assets/video/projects/thmos-dribbling.mp4
     poster: /assets/img/projects/thmos-dribbling.jpg
@@ -20,12 +20,12 @@ highlights:
     text: Built GPU-parallel training in Isaac Lab with Newton/MuJoCo-Warp, physical randomization, and ONNX export with consistent observations, joint ordering, and actuator limits. Demonstrated continuous dribbling on Booster K1 and in simulation.
 importance: -2.5
 category: work
-summary: Adapted Joga-style reinforcement learning for reference-free dribbling on Booster K1, jointly learning locomotion and head control from ball-velocity commands, proprioception, and camera-frame ball observations. Trained with asymmetric PPO and a command-change curriculum; demonstrated dribbling in simulation and on the real robot.
+summary: Trained reference-free dribbling on Booster K1 using asymmetric PPO, jointly learning locomotion and head control from ball-velocity commands, proprioception, and camera-frame ball observations.
 preview_video: /assets/video/projects/thmos-dribbling.mp4
 poster: /assets/img/projects/thmos-dribbling.jpg
 ---
 
-Adapted Joga-style reinforcement learning for command-conditioned dribbling on Booster K1, combining locomotion, foot–ball interaction, and active head motion in a single whole-body policy.
+Trained reference-free dribbling on Booster K1 using asymmetric PPO, jointly learning locomotion and head control from ball-velocity commands, proprioception, and camera-frame ball observations.
 
 {% include project_video.liquid path="/assets/video/projects/thmos-dribbling.mp4" poster="/assets/img/projects/thmos-dribbling.jpg" title="Dribbling on Booster K1" controls=true %}
 
