@@ -3,8 +3,6 @@ layout: page
 title: TH-MOS Gait & Soccer Skills
 description: Learning and deploying locomotion, shooting, and fall recovery on Booster K1.
 permalink: /projects/thmos-gait/
-selected: true
-modal_id: thmos-gait
 eyebrow: TH-MOS · Learning & Control
 dialog_intro: From learned motion priors to real competition. I develop and deploy locomotion, target-conditioned shooting, and fast recovery policies on Booster K1.
 metrics:
