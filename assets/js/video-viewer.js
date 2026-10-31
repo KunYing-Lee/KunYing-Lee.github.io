@@ -11,7 +11,8 @@
   document.body.append(dialog);
   let trigger;
 
-  const open = (video, button) => {
+  const open = async (video, button) => {
+    if (!video.videoWidth) await new Promise((resolve) => video.addEventListener("loadedmetadata", resolve, { once: true }));
     trigger = button;
     const player = video.cloneNode(true);
     player.removeAttribute("id");
@@ -32,6 +33,14 @@
       },
       { once: true }
     );
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const scale = Math.min(
+      1200 / video.videoWidth,
+      (innerWidth * 0.94 - rem) / video.videoWidth,
+      (innerHeight * 0.94 - 3.3 * rem) / video.videoHeight
+    );
+    player.style.width = `${video.videoWidth * scale}px`;
+    player.style.height = `${video.videoHeight * scale}px`;
     dialog.append(player);
     dialog.showModal();
     close.focus();

@@ -3433,3 +3433,33 @@ video[role="button"] {
   color: var(--global-theme-color);
   cursor: pointer;
 }
+
+.video-viewer-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+.video-viewer-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+#thmos-incheon-2026-slide-1:checked ~ .news-gallery-viewport .news-gallery-arrow-1 {
+  display: flex;
+}
+#thmos-incheon-2026-slide-1:checked ~ .news-gallery-dots label[for="thmos-incheon-2026-slide-1"] {
+  background: var(--global-theme-color);
+}
+
+#thmos-incheon-2026-slide-2:checked ~ .news-gallery-viewport .news-gallery-arrow-2 {
+  display: flex;
+}
+#thmos-incheon-2026-slide-2:checked ~ .news-gallery-dots label[for="thmos-incheon-2026-slide-2"] {
+  background: var(--global-theme-color);
+}
+
+#thmos-incheon-2026-slide-3:checked ~ .news-gallery-viewport .news-gallery-arrow-3 {
+  display: flex;
+}
+#thmos-incheon-2026-slide-3:checked ~ .news-gallery-dots label[for="thmos-incheon-2026-slide-3"] {
+  background: var(--global-theme-color);
+}

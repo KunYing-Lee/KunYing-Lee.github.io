@@ -17,10 +17,10 @@ related_posts: false
         <div class="news-gallery-stage">
           <div class="news-gallery-track">
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-rcap-tianjin-2026/5.png' | relative_url }}" alt="THMOS at 2026 RoboCup Asia-Pacific Tianjin Invitational Tournament, photo 1" loading="lazy">
+              <img src="{{ '/assets/img/news/thmos-rcap-tianjin-2026/5.webp' | relative_url }}" alt="THMOS at 2026 RoboCup Asia-Pacific Tianjin Invitational Tournament, photo 1" loading="lazy" decoding="async">
             </figure>
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-rcap-tianjin-2026/6.png' | relative_url }}" alt="THMOS at 2026 RoboCup Asia-Pacific Tianjin Invitational Tournament, photo 2" loading="lazy">
+              <img src="{{ '/assets/img/news/thmos-rcap-tianjin-2026/6.webp' | relative_url }}" alt="THMOS at 2026 RoboCup Asia-Pacific Tianjin Invitational Tournament, photo 2" loading="lazy" decoding="async">
             </figure>
           </div>
         </div>

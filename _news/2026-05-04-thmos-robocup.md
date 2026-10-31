@@ -19,16 +19,16 @@ related_posts: false
         <div class="news-gallery-stage">
           <div class="news-gallery-track">
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-robocup-2026/1.jpg' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 1" loading="lazy">
+              <img src="{{ '/assets/img/news/thmos-robocup-2026/1.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 1" loading="lazy" decoding="async">
             </figure>
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-robocup-2026/2.jpg' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 2" loading="lazy">
+              <img src="{{ '/assets/img/news/thmos-robocup-2026/2.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 2" loading="lazy" decoding="async">
             </figure>
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-robocup-2026/3.jpg' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 3" loading="lazy">
+              <img src="{{ '/assets/img/news/thmos-robocup-2026/3.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 3" loading="lazy" decoding="async">
             </figure>
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-robocup-2026/4.jpg' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 4" loading="lazy">
+              <img src="{{ '/assets/img/news/thmos-robocup-2026/4.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 4" loading="lazy" decoding="async">
             </figure>
           </div>
         </div>
