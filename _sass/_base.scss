@@ -3483,3 +3483,8 @@ video[role="button"] {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.news-gallery-slide img.news-gallery-portrait {
+  width: auto;
+  max-height: min(26rem, 60svh);
+}
