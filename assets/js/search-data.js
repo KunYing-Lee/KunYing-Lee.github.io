@@ -417,8 +417,8 @@ ninja.data = [{
           description: "Differentiable-world-model motion tracking on native MuJoCo-Warp.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/supermimic/";
-            },},{id: "projects-th-mos-dribbling",
-          title: 'TH-MOS Dribbling',
+            },},{id: "projects-dribbling",
+          title: 'Dribbling',
           description: "Whole-body humanoid dribbling with active vision on Booster K1.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/thmos-dribbling/";
