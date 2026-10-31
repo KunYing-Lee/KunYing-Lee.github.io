@@ -417,6 +417,11 @@ ninja.data = [{
           description: "Differentiable-world-model motion tracking on native MuJoCo-Warp.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/supermimic/";
+            },},{id: "projects-th-mos-dribbling",
+          title: 'TH-MOS Dribbling',
+          description: "Whole-body humanoid dribbling with active vision on Booster K1.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thmos-dribbling/";
             },},{id: "projects-th-mos-gait-amp-soccer-skills",
           title: 'TH-MOS Gait &amp;amp; Soccer Skills',
           description: "Learning and deploying locomotion, shooting, and fall recovery on Booster K1.",
