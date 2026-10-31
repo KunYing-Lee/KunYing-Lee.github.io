@@ -22,14 +22,11 @@ highlights:
 ongoing: Self-play multi-agent reinforcement learning for team decision-making, starting from MAPPO.
 importance: -1
 category: work
-role: Platform Developer · TH-MOS Robot Soccer Team
 summary: Built a Unity–MuJoCo platform for autonomous 3v3 and 5v5 humanoid soccer, connecting learned locomotion, kicking, and recovery with perception, team decisions, and match management.
 preview_video: /assets/video/projects/robot-sports-simulation.mp4
 poster: /assets/img/projects/robot-sports-simulation.jpg
 preview_label: Simulation · Robot Sports
 ---
-
-**Role:** Platform Developer, TH-MOS Robot Soccer Team, Tsinghua University.
 
 I developed Robot Sports to connect humanoid control and team decision-making in an interactive soccer environment. The platform combines Unity visualization with native MuJoCo physics and supports autonomous 3v3 and 5v5 matches.
 

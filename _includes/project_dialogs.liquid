@@ -6,7 +6,9 @@
       <div>
         <p class="project-dialog-eyebrow">{{ project.eyebrow }}</p>
         <h2 id="project-dialog-title">{{ project.title }}</h2>
-        <p class="project-dialog-role">{{ project.role }}</p>
+        {% if project.role %}
+          <p class="project-dialog-role">{{ project.role }}</p>
+        {% endif %}
       </div>
       <button type="button" class="project-dialog-close" data-close-project aria-label="Close project details" autofocus>
         <span aria-hidden="true">&times;</span>
