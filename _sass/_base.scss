@@ -1950,6 +1950,10 @@ footer.sticky-bottom {
     border-radius: 0.4rem;
   }
 
+  .project-title-static {
+    color: var(--global-theme-color);
+  }
+
   .project-title-trigger,
   .project-detail-link {
     border: 0;
@@ -2142,6 +2146,10 @@ body.project-dialog-open {
 
 .project-dialog-body {
   padding: 1.4rem 1.75rem 1.75rem;
+
+  &.project-dialog-body-compact {
+    padding-top: 0.75rem;
+  }
 }
 
 .project-dialog-intro {

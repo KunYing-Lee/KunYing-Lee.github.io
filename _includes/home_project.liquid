@@ -31,7 +31,9 @@
     {% endif %}
     <div class="{% if project.preview_video %}col-md-8{% elsif project.img %}col-sm-7 col-md-9{% else %}col-12{% endif %}">
       <h3 class="project-title">
-        {% if project.selected and project.modal_id %}
+        {% if project.title_link == false %}
+          <span class="project-title-static">{{ project.title }}</span>
+        {% elsif project.selected and project.modal_id %}
           <button type="button" class="project-title-trigger" data-project-dialog="{{ project.modal_id }}" aria-haspopup="dialog">
             {{ project.title }}
           </button>

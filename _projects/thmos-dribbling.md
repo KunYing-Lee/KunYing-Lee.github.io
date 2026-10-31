@@ -4,7 +4,7 @@ title: Dribbling
 description: Whole-body humanoid dribbling with active vision on Booster K1.
 permalink: /projects/thmos-dribbling/
 selected: true
-modal_id: thmos-dribbling
+title_link: false
 eyebrow: TH-MOS · Learning & Control
 dialog_intro: Trained reference-free dribbling on Booster K1 using asymmetric PPO, jointly learning locomotion and head control from ball-velocity commands, proprioception, and camera-frame ball observations.
 media:
