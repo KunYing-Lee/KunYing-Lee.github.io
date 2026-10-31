@@ -2083,6 +2083,14 @@ body.project-dialog-open {
   border-bottom: 1px solid var(--global-divider-color);
   background: var(--global-bg-color);
 
+  &:not(:has(.project-dialog-role)) {
+    padding-bottom: 0.6rem;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
   h2 {
     margin: 0.35rem 0 0.45rem;
     font-size: 2rem;
