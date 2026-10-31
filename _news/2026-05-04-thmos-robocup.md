@@ -22,7 +22,7 @@ related_posts: false
               <img src="{{ '/assets/img/news/thmos-robocup-2026/1.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 1" loading="lazy" decoding="async">
             </figure>
             <figure class="news-gallery-slide">
-              <img src="{{ '/assets/img/news/thmos-robocup-2026/2.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 2" loading="lazy" decoding="async">
+              <img src="{{ '/assets/img/news/thmos-robocup-2026/2-upright.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 2" loading="lazy" decoding="async">
             </figure>
             <figure class="news-gallery-slide">
               <img src="{{ '/assets/img/news/thmos-robocup-2026/3.webp' | relative_url }}" alt="THMOS at RoboCup China Open 2026, photo 3" loading="lazy" decoding="async">

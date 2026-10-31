@@ -3439,8 +3439,8 @@ video[role="button"] {
   box-shadow: none;
 }
 .video-viewer-close:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: none;
 }
 
 #thmos-incheon-2026-slide-1:checked ~ .news-gallery-viewport .news-gallery-arrow-1 {
@@ -3462,4 +3462,24 @@ video[role="button"] {
 }
 #thmos-incheon-2026-slide-3:checked ~ .news-gallery-dots label[for="thmos-incheon-2026-slide-3"] {
   background: var(--global-theme-color);
+}
+
+// Let the selected photograph determine the gallery height without letterboxing.
+.news-gallery-stage,
+.news-gallery-track {
+  height: auto;
+}
+.news-gallery-slide.is-active {
+  position: relative;
+}
+.news-gallery-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+}
+.news-gallery-card {
+  padding-top: 0;
+  padding-bottom: 0;
 }
