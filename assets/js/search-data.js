@@ -422,11 +422,21 @@ ninja.data = [{
           description: "Whole-body humanoid dribbling with active vision on Booster K1.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/thmos-dribbling/";
-            },},{id: "projects-th-mos-gait-amp-soccer-skills",
-          title: 'TH-MOS Gait &amp;amp; Soccer Skills',
-          description: "Learning and deploying locomotion, shooting, and fall recovery on Booster K1.",
+            },},{id: "projects-fall-recovery",
+          title: 'Fall Recovery',
+          description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/thmos-gait/";
+              window.location.href = "/projects/thmos-fall-recovery/";
+            },},{id: "projects-omnidirectional-locomotion",
+          title: 'Omnidirectional Locomotion',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thmos-locomotion/";
+            },},{id: "projects-shooting",
+          title: 'Shooting',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thmos-shooting/";
             },},{id: "projects-th-mos-simulation",
           title: 'TH-MOS Simulation',
           description: "A Unity–MuJoCo platform for humanoid soccer simulation and evaluation.",
